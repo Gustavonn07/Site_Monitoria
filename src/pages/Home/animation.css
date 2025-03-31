@@ -1,0 +1,25 @@
+@keyframes fadeClip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes fadeClipReverse {
+  0% {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.animate-clip {
+  animation: fadeClip 0.5s ease-in-out forwards;
+}
+
+.animate-clip-reverse {
+  animation: fadeClipReverse 0.5s ease-in-out forwards;
+}
