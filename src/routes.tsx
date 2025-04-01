@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { MainLayout } from "./layout";
-import { Home } from "./pages";
+import { Home, Multimedia } from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
 
@@ -31,11 +31,11 @@ const publicRoutes: RouteObject[] = [
     children: [
       {
         path: "/programming_2",
-        element: <Home />,
+        element: <></>,
       },
       {
         path: "/multimedia_authoring_2",
-        element: <Home />,
+        element: <Multimedia />,
       },
     ]
   },
