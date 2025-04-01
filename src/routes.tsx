@@ -2,6 +2,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { MainLayout } from "./layout";
 import { Home } from "./pages";
 import { PrivateRoutes } from "./components";
+import { PagesLayout } from "./layout/PagesLayout";
 
 const privateRoutes: RouteObject[] = [
   {
@@ -24,6 +25,19 @@ const publicRoutes: RouteObject[] = [
         element: <Home />,
       },
     ],
+  },
+  {
+    element: <PagesLayout />,
+    children: [
+      {
+        path: "/programming_2",
+        element: <Home />,
+      },
+      {
+        path: "/multimedia_authoring_2",
+        element: <Home />,
+      },
+    ]
   },
   {
     path: "*",
