@@ -25,3 +25,57 @@
   --color-success: #3fa170; 
   
 }
+
+@keyframes expand {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 500px; 
+  }
+}
+
+@keyframes collapse {
+  from {
+    max-height: 500px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+@keyframes expand-left {
+  from {
+    width: 8.33%; 
+  }
+  to {
+    width: 23.33%; 
+  }
+}
+
+@keyframes collapse-left {
+  from {
+    width: 23.33%; 
+  }
+  to {
+    width: 8.33%;
+  }
+}
+
+.sidebar {
+  animation: expand-left 0.3s ease-out forwards;
+}
+
+.sidebar.expanded_sidebar {
+  animation: collapse-left 0.3s ease-out forwards;
+}
+
+.group-items {
+  max-height: 0;
+  overflow: hidden;
+  animation: collapse 0.3s ease-out forwards;
+}
+
+.group-items.expanded {
+  animation: expand 0.3s ease-in forwards;
+}
