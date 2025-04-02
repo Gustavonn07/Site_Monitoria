@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 @theme {
   --color-primary-100: #a3b8bf;
   --color-primary-200: #89a2ab;
@@ -46,19 +50,19 @@
 
 @keyframes expand-left {
   from {
-    width: 8.33%; 
+    width: 10.33vw; 
   }
   to {
-    width: 23.33%; 
+    width: 30vw; 
   }
 }
 
 @keyframes collapse-left {
   from {
-    width: 23.33%; 
+    width: 30vw; 
   }
   to {
-    width: 8.33%;
+    width: 10.33vw;
   }
 }
 

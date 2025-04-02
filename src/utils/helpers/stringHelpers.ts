@@ -1,7 +1,7 @@
 /**
  * Classe utilitária para formatação e manipulação de strings.
  */
-class StringHelpers {
+export class StringHelpers {
   /**
    * Remove todos os caracteres não numéricos de uma string.
    * @param value - A string a ser limpa.
@@ -106,5 +106,3 @@ class StringHelpers {
     return "xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx".replace(/x/g, randomDigit);
   }
 }
-
-export default StringHelpers;

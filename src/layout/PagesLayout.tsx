@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Heading, HeadingProps } from "../components";
+import { Heading, HeadingProps, Sidebar } from "../components";
 
 export type pagesLayoutContext = {
   setHead: React.Dispatch<React.SetStateAction<HeadingProps>>;
@@ -8,11 +8,13 @@ export type pagesLayoutContext = {
 
 export const PagesLayout = () => {
   const [head, setHead] = React.useState<HeadingProps>({ title: undefined })
-  // Adicionar sidebar de forma que mude de acordo com a url
   return (
-    <main>
-      <Heading title={head?.title} />
-      <Outlet context={{ setHead }}/>
+    <main className="flex">
+      <Sidebar />
+      <section className="bg-primary-100/50 w-full min-h-screen">
+        <Heading title={head?.title} />
+        <Outlet context={{ setHead }}/>
+      </section>
     </main>
   );
 };

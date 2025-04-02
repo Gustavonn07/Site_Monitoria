@@ -35,6 +35,7 @@ export const useViewport = () => {
     isMd: pageWidth > 640 && pageWidth <= 768,
     isLg: pageWidth > 768 && pageWidth <= 1024,
     isXl: pageWidth > 1024 && pageWidth <= 1280,
-    is2xl: pageWidth >= 1536,
+    is2xl: pageWidth > 1280,
+    isMobile: pageWidth <= 768
   };
 };

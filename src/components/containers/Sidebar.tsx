@@ -1,21 +1,30 @@
+import React from "react";
 import {
+  Separator,
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from "../ui";
 import { useViewport } from "../../hooks";
-import { sidebar_data_multimedia } from "./assets/sidebar.data";
-import { useNavigate } from "react-router-dom";
+import {
+  sidebar_data_multimedia,
+  sidebar_data_programming,
+} from "./assets/sidebar.data";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
-import { cn } from "../../utils";
+import { cn, StringHelpers } from "../../utils";
 
 export const Sidebar = () => {
   const viewport = useViewport();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [expandedGroups, setExpandedGroups] = React.useState<string[]>([]);
   const [isCollapsed, setIsCollapsed] = React.useState<boolean>(false);
@@ -28,10 +37,16 @@ export const Sidebar = () => {
     );
   };
 
+  const url = location.pathname || "";
+  const sidebar_data = React.useMemo(() => {
+    return url.includes("multimedia_authoring_2")
+      ? sidebar_data_multimedia
+      : sidebar_data_programming;
+  }, [url]);
+
   return (
     <>
       {viewport.isSm ? (
-        // VERSÃO MOBILE
         <Sheet>
           <SheetTrigger>Open</SheetTrigger>
           <SheetContent>
@@ -45,67 +60,131 @@ export const Sidebar = () => {
           </SheetContent>
         </Sheet>
       ) : (
-        // VERSÃO DESKTOP
         <nav
           className={cn(
-            "bg-gray-500 sidebar sm:w-1/3 lg:w-3/12 h-screen p-4 flex flex-col",
+            "bg-primary-500 sidebar sm:w-1/3 lg:w-3/12 h-screen p-4 flex flex-col",
             {
-              "sm:w-1/12 lg:w-1/12 expanded_sidebar": isCollapsed,
+              expanded_sidebar: isCollapsed,
             }
           )}
         >
-          <div className="flex justify-between w-full">
-            <h3>TITULO</h3>
-            <Icon
-              className="cursor-pointer"
-              icon="lucide:arrow-left-right"
-              onClick={() => {
-                setIsCollapsed(!isCollapsed);
-                if(!isCollapsed) setExpandedGroups([])
-              }}
-            />
-          </div>
-          {sidebar_data_multimedia.map((item) => (
-            <div key={item.groupTitle} className="space-y-4">
+          <div className="flex flex-col">
+            <div className="flex justify-center gap-5 w-full items-center mb-6">
               <h3
+                className={cn("text-2xl text-primary-800", {
+                  hidden: isCollapsed,
+                })}
+              >
+                TITULO
+              </h3>
+              <Icon
                 className={cn(
-                  "text-xl font-semibold text-white cursor-pointer",
+                  "cursor-pointer ml-auto text-xl text-primary-800",
                   {
+                    "mx-auto": isCollapsed,
+                  }
+                )}
+                icon="lucide:arrow-left-right"
+                onClick={() => {
+                  setIsCollapsed(!isCollapsed);
+                  if (!isCollapsed) setExpandedGroups([]);
+                }}
+              />
+            </div>
+            <Separator />
+          </div>
+          {/* TROCAR DE ACORDO COM A URL */}
+          {sidebar_data.map((item) => (
+            <div key={item.groupTitle} className="space-y-4">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="w-full">
+                    <h3
+                      className={cn(
+                        "text-xl font-semibold text-secondary-100 cursor-pointer flex items-center gap-2",
+                        {
+                          "opacity-50 cursor-not-allowed": item.groupDisabled,
+                          "justify-center": isCollapsed,
+                        }
+                      )}
+                      onClick={() => {
+                        if (item.groupDisabled) return;
+                        toggleGroup(item.groupTitle);
+                        setIsCollapsed(false);
+                      }}
+                    >
+                      <Icon
+                        icon={item.groupIcon}
+                        className={cn("text-2xl", {
+                          "text-4xl": isCollapsed,
+                        })}
+                      />
+                      <span className={cn({ hidden: isCollapsed })}>
+                        {StringHelpers.truncateString({
+                          text: item.groupTitle,
+                          length: [
+                            viewport.isLg,
+                            viewport.isXl,
+                            viewport.is2xl,
+                          ].some(Boolean)
+                            ? 20
+                            : 10,
+                        })}
+                      </span>
+                    </h3>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.groupTitle}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <ul
+                className={cn(
+                  "group-items flex flex-col cursor-pointer",
+                  {
+                    expanded: expandedGroups.includes(item.groupTitle),
                     "opacity-50 cursor-not-allowed": item.groupDisabled,
                   }
                 )}
-                onClick={() => {
-                  if (item.groupDisabled) return;
-                  toggleGroup(item.groupTitle);
-                  setIsCollapsed(false);
-                }}
-              >
-                {item.groupTitle}
-              </h3>
-              <ul
-                className={cn("space-y-2 group-items cursor-pointer", {
-                  expanded: expandedGroups.includes(item.groupTitle),
-                  "opacity-50 cursor-not-allowed": item.groupDisabled,
-                })}
               >
                 {item.group.map((item) => (
-                  <li
-                    key={item.title}
-                    className={cn(
-                      "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300",
-                      {
-                        "opacity-50 cursor-not-allowed": item.disabled,
-                        "hover:bg-red-600 hover:text-white": !item.disabled,
-                      }
-                    )}
-                    onClick={() => {
-                      if (item.disabled) return;
-                      navigate(item.link);
-                    }}
-                  >
-                    <Icon icon={item.icon} className="w-5 h-5" />
-                    <h4 className="text-lg font-medium">{item.title}</h4>
-                  </li>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <li
+                          key={item.title}
+                          className={cn(
+                            "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 text-primary-700 hover:text-secondary-100",
+                            {
+                              "opacity-50 cursor-not-allowed": item.disabled,
+                              "hover:text-primary-700": !item.disabled,
+                            }
+                          )}
+                          onClick={() => {
+                            if (item.disabled) return;
+                            navigate(item.link);
+                          }}
+                        >
+                          <Icon icon={item.icon} className="w-5 h-5" />
+                          <h4 className="text-lg font-medium">
+                            {StringHelpers.truncateString({
+                              text: item.title,
+                              length: [
+                                viewport.isLg,
+                                viewport.isXl,
+                                viewport.is2xl,
+                              ].some(Boolean)
+                                ? 20
+                                : 11,
+                            })}
+                          </h4>
+                        </li>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{item.title}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 ))}
               </ul>
             </div>
