@@ -93,7 +93,6 @@ export const Sidebar = () => {
             </div>
             <Separator />
           </div>
-          {/* TROCAR DE ACORDO COM A URL */}
           {sidebar_data.map((item) => (
             <div key={item.groupTitle} className="space-y-4">
               <TooltipProvider>
@@ -101,7 +100,7 @@ export const Sidebar = () => {
                   <TooltipTrigger className="w-full">
                     <h3
                       className={cn(
-                        "text-xl font-semibold text-secondary-100 cursor-pointer flex items-center gap-2",
+                        "text-xl font-semibold text-primary-800 cursor-pointer flex items-center gap-2",
                         {
                           "opacity-50 cursor-not-allowed": item.groupDisabled,
                           "justify-center": isCollapsed,
@@ -154,10 +153,10 @@ export const Sidebar = () => {
                         <li
                           key={item.title}
                           className={cn(
-                            "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 text-primary-700 hover:text-secondary-100",
+                            "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 text-primary-700 hover:text-secondary-700",
                             {
                               "opacity-50 cursor-not-allowed": item.disabled,
-                              "hover:text-primary-700": !item.disabled,
+                              "hover:text-secondary-700 hover:bg-primary-300": !item.disabled,
                             }
                           )}
                           onClick={() => {
