@@ -1,9 +1,10 @@
-import { useOutletContext } from "react-router-dom";
 import { VariantProps } from "class-variance-authority";
+import { useOutletContext } from "react-router-dom";
 import { pagesLayoutContext } from "../../layout";
+import { pageSectionVariant } from "../common";
 import { PageItemsType } from "../../@types";
-import { buttonVariants } from "../ui";
 import { HeadingProps } from "./Heading";
+import { buttonVariants } from "../ui";
 import React from "react";
 
 export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
@@ -12,14 +13,21 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
     type: PageItemsType;
     title?: string;
     description?: React.JSX.Element;
-    actionsInfo?: {
-      text: string;
-      className: string;
-      handler: () => void;
-      variant?: VariantProps<typeof buttonVariants>;
+    infoProps?: {
+      actionsInfo?: {
+        text: string;
+        handler: () => void;
+        className?: string;
+        variant?: VariantProps<typeof buttonVariants>;
+      };
+      className?: string
     };
-    extraFieldSection?: React.JSX.Element;
-    hasSeparatorSection?: boolean;
+    sectionProps?: {
+      extraFieldSection?: React.JSX.Element;
+      hasSeparatorSection?: boolean;
+      className?: string;
+      variant?: VariantProps<typeof pageSectionVariant>;
+    };
   }[];
   bibliography: {
     title: string;

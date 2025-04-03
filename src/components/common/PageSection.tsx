@@ -3,7 +3,7 @@ import { cn } from "../../utils";
 import React from "react";
 import { Separator } from "../ui";
 
-const pageSectionVariant = cva("my-10 text-secondary-800 rounded-lg", {
+export const pageSectionVariant = cva("my-10 text-secondary-800 rounded-lg", {
   variants: {
     variant: {
       default: "bg-transparent",
