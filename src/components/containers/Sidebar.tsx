@@ -62,7 +62,7 @@ export const Sidebar = () => {
       ) : (
         <nav
           className={cn(
-            "bg-primary-500 sidebar sm:w-1/3 lg:w-3/12 h-screen p-4 flex flex-col",
+            "bg-primary-500 sidebar sm:w-1/3 lg:w-3/12 min-h-screen p-4 flex flex-col",
             {
               expanded_sidebar: isCollapsed,
             }
