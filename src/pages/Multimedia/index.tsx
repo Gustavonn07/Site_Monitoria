@@ -74,6 +74,26 @@ export const Multimedia = () => {
           ),
         },
       ]}
+      bibliography={[
+        {
+          title: "Documentação oficial do React",
+          link: "https://react.dev",
+          text: "Material de apoio para aprender React direto da fonte.",
+          image: "https://reactjs.org/logo-og.png",
+        },
+        {
+          title: "Documentação oficial do React",
+          link: "https://react.dev",
+          text: "Material de apoio para aprender React direto da fonte.",
+          image: "https://reactjs.org/logo-og.png",
+        },
+        {
+          title: "Documentação oficial do React",
+          link: "https://react.dev",
+          text: "Material de apoio para aprender React direto da fonte.",
+          image: "https://reactjs.org/logo-og.png",
+        },
+      ]}
     />
   );
 };

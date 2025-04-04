@@ -1,7 +1,12 @@
 import { VariantProps } from "class-variance-authority";
 import { useOutletContext } from "react-router-dom";
 import { pagesLayoutContext } from "../../layout";
-import { InfoCard, PageSection, pageSectionVariant } from "../common";
+import {
+  Bibliography,
+  InfoCard,
+  PageSection,
+  pageSectionVariant,
+} from "../common";
 import { PageItemsType } from "../../@types";
 import { HeadingProps } from "./Heading";
 import { buttonVariants } from "../ui";
@@ -36,12 +41,12 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
     link: string;
     text?: string;
     image?: string;
+    hasSeparator?: boolean;
   }[];
   goBack?: string;
   goFoward?: string;
 }
 
-// CRIAR COMPONENTE DE BIBLIOGRAFIA
 // GO_BACK E GO_FOWARD
 
 export const PageBuilder = ({
@@ -59,10 +64,11 @@ export const PageBuilder = ({
   return (
     <>
       <section className="flex flex-col gap-5">
-        {itens.map((item) => (
+        {itens.map((item, index) => (
           <>
             {item.type === PageItemsType.SECTION && (
               <PageSection
+                key={index}
                 title={item.title}
                 description={item.description}
                 hasSeparator={item?.sectionProps?.hasSeparatorSection}
@@ -72,6 +78,7 @@ export const PageBuilder = ({
             )}
             {item.type === PageItemsType.INFO && (
               <InfoCard
+                key={index}
                 title={item.title}
                 description={item.description}
                 actions={{
@@ -86,6 +93,16 @@ export const PageBuilder = ({
             )}
             {item.type === PageItemsType.EXTRA && item.extraSection}
           </>
+        ))}
+        {bibliography?.map((item, index) => (
+          <Bibliography
+            title={item.title}
+            link={item.link}
+            image={item?.image}
+            text={item?.text}
+            hasSeparator={item?.hasSeparator}
+            key={index}
+          />
         ))}
         {goBack}
         {goFoward}
