@@ -20,7 +20,7 @@ interface PropsPageSection
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof pageSectionVariant> {
   title: string;
-  description: React.JSX.Element;
+  description?: React.JSX.Element;
   extraField?: React.JSX.Element;
   hasSeparator?: boolean;
 }
@@ -43,7 +43,7 @@ export const PageSection = ({
         )}
       >
         <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-        <div className="text-lg">{description}</div>
+        {description && <div className="text-lg">{description}</div>}
         {extraField}
       </article>
       {variant === "default" && hasSeparator && (

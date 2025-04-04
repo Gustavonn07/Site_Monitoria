@@ -1,7 +1,7 @@
 import { VariantProps } from "class-variance-authority";
 import { useOutletContext } from "react-router-dom";
 import { pagesLayoutContext } from "../../layout";
-import { pageSectionVariant } from "../common";
+import { InfoCard, PageSection, pageSectionVariant } from "../common";
 import { PageItemsType } from "../../@types";
 import { HeadingProps } from "./Heading";
 import { buttonVariants } from "../ui";
@@ -11,7 +11,7 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
   head: HeadingProps;
   itens: {
     type: PageItemsType;
-    title?: string;
+    title: string;
     description?: React.JSX.Element;
     infoProps?: {
       actionsInfo?: {
@@ -20,7 +20,8 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
         className?: string;
         variant?: VariantProps<typeof buttonVariants>;
       };
-      className?: string
+      className?: string;
+      hasSeparatorInfo?: boolean;
     };
     sectionProps?: {
       extraFieldSection?: React.JSX.Element;
@@ -28,8 +29,9 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
       className?: string;
       variant?: VariantProps<typeof pageSectionVariant>;
     };
+    extraSection?: React.JSX.Element;
   }[];
-  bibliography: {
+  bibliography?: {
     title: string;
     link: string;
     text?: string;
@@ -39,7 +41,6 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
   goFoward?: string;
 }
 
-// FAZER COM QUE POSSA CRIAR SECTIONS COM BASE DOS ITENS RECEBIDOS
 // CRIAR COMPONENTE DE BIBLIOGRAFIA
 // GO_BACK E GO_FOWARD
 
@@ -57,7 +58,35 @@ export const PageBuilder = ({
   }, []);
   return (
     <>
-      <section>
+      <section className="flex flex-col gap-5">
+        {itens.map((item) => (
+          <>
+            {item.type === PageItemsType.SECTION && (
+              <PageSection
+                title={item.title}
+                description={item.description}
+                hasSeparator={item?.sectionProps?.hasSeparatorSection}
+                extraField={item?.sectionProps?.extraFieldSection}
+                variant={item?.sectionProps?.variant?.variant}
+              />
+            )}
+            {item.type === PageItemsType.INFO && (
+              <InfoCard
+                title={item.title}
+                description={item.description}
+                actions={{
+                  text: item?.infoProps?.actionsInfo?.text,
+                  variant: item?.infoProps?.actionsInfo?.variant,
+                  className: item?.infoProps?.actionsInfo?.className,
+                  handler: item?.infoProps?.actionsInfo?.handler,
+                }}
+                hasSeparator={item?.infoProps?.hasSeparatorInfo}
+                className={item?.infoProps?.className}
+              />
+            )}
+            {item.type === PageItemsType.EXTRA && item.extraSection}
+          </>
+        ))}
         {goBack}
         {goFoward}
       </section>

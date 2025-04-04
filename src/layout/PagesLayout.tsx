@@ -7,13 +7,16 @@ export type pagesLayoutContext = {
 };
 
 export const PagesLayout = () => {
-  const [head, setHead] = React.useState<HeadingProps>({ title: undefined })
+  const [head, setHead] = React.useState<HeadingProps>({
+    title: undefined,
+    description: undefined,
+  });
   return (
     <main className="flex">
       <Sidebar />
       <section className="bg-primary-100/80 w-full min-h-screen px-5 py-4">
-        {head && <Heading title={head?.title} />}
-        <Outlet context={{ setHead }}/>
+        {head && <Heading title={head?.title} description={head.description} />}
+        <Outlet context={{ setHead }} />
       </section>
     </main>
   );
