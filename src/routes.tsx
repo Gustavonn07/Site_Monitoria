@@ -3,6 +3,7 @@ import { MainLayout } from "./layout";
 import { Home, Multimedia } from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
+import IntroductionP5js from "./pages/IntroductionP5";
 
 const privateRoutes: RouteObject[] = [
   {
@@ -30,8 +31,8 @@ const publicRoutes: RouteObject[] = [
     element: <PagesLayout />,
     children: [
       {
-        path: "/programming_2",
-        element: <></>,
+        path: "/introduction_p5",
+        element: <IntroductionP5js />,
       },
       {
         path: "/multimedia_authoring_2",
