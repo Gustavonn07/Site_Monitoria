@@ -1,5 +1,5 @@
 import { VariantProps } from "class-variance-authority";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import { pagesLayoutContext } from "../../layout";
 import {
   Bibliography,
@@ -9,7 +9,8 @@ import {
 } from "../common";
 import { PageItemsType } from "../../@types";
 import { HeadingProps } from "./Heading";
-import { buttonVariants } from "../ui";
+import { Button, buttonVariants } from "../ui";
+import { cn } from "../../utils";
 import React from "react";
 
 export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
@@ -43,11 +44,17 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
     image?: string;
     hasSeparator?: boolean;
   }[];
-  goBack?: string;
-  goFoward?: string;
+  goBack?: {
+    text: string;
+    link: string;
+    className?: string;
+  };
+  goFoward?: {
+    text: string;
+    link: string;
+    className?: string;
+  };
 }
-
-// GO_BACK E GO_FOWARD
 
 export const PageBuilder = ({
   itens,
@@ -57,6 +64,7 @@ export const PageBuilder = ({
   head,
 }: TypePageBuilder) => {
   const { setHead } = useOutletContext<pagesLayoutContext>();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     setHead({ ...head });
@@ -64,6 +72,24 @@ export const PageBuilder = ({
   return (
     <>
       <section className="flex flex-col gap-5">
+        <div className="flex justify-between w-full bottom-5">
+          <Button
+            variant="secondary"
+            onClick={() => navigate("/" + goBack?.link)}
+            disabled={!goBack?.link}
+            className={cn("w-32", goBack?.className)}
+          >
+            {goBack?.text ?? "Voltar"}
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => navigate("/" + goFoward?.link)}
+            disabled={!goFoward?.link}
+            className={cn("w-32", goFoward?.className)}
+          >
+            {goFoward?.text ?? "Próximo"}
+          </Button>
+        </div>
         {itens.map((item, index) => (
           <>
             {item.type === PageItemsType.SECTION && (
@@ -104,8 +130,25 @@ export const PageBuilder = ({
             key={index}
           />
         ))}
-        {goBack}
-        {goFoward}
+
+        <div className="flex justify-between w-full bottom-5">
+          <Button
+            variant="secondary"
+            onClick={() => navigate("/" + goBack?.link)}
+            disabled={!goBack?.link}
+            className={cn("w-32", goBack?.className)}
+          >
+            {goBack?.text ?? "Voltar"}
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => navigate("/" + goFoward?.link)}
+            disabled={!goFoward?.link}
+            className={cn("w-32", goFoward?.className)}
+          >
+            {goFoward?.text ?? "Próximo"}
+          </Button>
+        </div>
       </section>
     </>
   );
