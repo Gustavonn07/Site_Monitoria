@@ -31,7 +31,7 @@ const publicRoutes: RouteObject[] = [
     element: <PagesLayout />,
     children: [
       {
-        path: "/introduction_p5",
+        path: "/programming/introduction_p5",
         element: <IntroductionP5js />,
       },
       {
