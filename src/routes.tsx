@@ -1,9 +1,8 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { MainLayout } from "./layout";
-import { Home, Multimedia } from "./pages";
+import { Home, Multimedia, ProgrammingStructure, ProgrammingInteractive, ProgrammingStyles, IntroductionP5js } from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
-import IntroductionP5js from "./pages/IntroductionP5";
 
 const privateRoutes: RouteObject[] = [
   {
@@ -35,10 +34,22 @@ const publicRoutes: RouteObject[] = [
         element: <IntroductionP5js />,
       },
       {
+        path: "/programming/structure_p5",
+        element: <ProgrammingStructure />,
+      },
+      {
+        path: "programming/styles",
+        element: <ProgrammingStyles />,
+      },
+      {
+        path: "programming/interactive",
+        element: <ProgrammingInteractive />,
+      },
+      {
         path: "/multimedia_authoring_2",
         element: <Multimedia />,
       },
-    ]
+    ],
   },
   {
     path: "*",

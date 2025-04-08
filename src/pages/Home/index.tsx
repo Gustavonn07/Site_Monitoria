@@ -21,7 +21,7 @@ export const Home = () => {
               backgroundImage: "url('images/home_code.jpg')",
               clipPath: "polygon(0 0, 100% 0, 90% 100%, 0% 100%)",
             }}
-            onClick={() => navigate("/programming_2")}
+            onClick={() => navigate("/programming/introduction_p5")}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/40 to-black/40 transition-opacity duration-300 group-hover:opacity-40" />
             <h2 className="text-current text-2xl lg:text-4xl font-bold z-20 mb-10">
@@ -49,7 +49,7 @@ export const Home = () => {
         <ul className="w-full h-full min-h-screen flex flex-col items-center gap-4 mt-24 px-6 py-6">
           <CardHome
             img="images/home_code.jpg"
-            link="/programming_2"
+            link="/programming/introduction_p5"
             title="Programação 02"
           />
           <CardHome
