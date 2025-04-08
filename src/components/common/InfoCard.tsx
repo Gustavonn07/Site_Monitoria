@@ -38,7 +38,7 @@ export const InfoCard = ({
         {description && (
           <div className="text-secondary-800 text-lg">{description}</div>
         )}
-        {actions && (
+        {actions?.text && (
           <Button
             className={cn(actions.className)}
             variant={actions.variant?.variant}

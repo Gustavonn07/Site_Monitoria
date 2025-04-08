@@ -14,7 +14,7 @@ export const PagesLayout = () => {
   return (
     <main className="flex">
       <Sidebar />
-      <section className="bg-primary-100/80 w-full min-h-screen px-5 py-4">
+      <section className="bg-primary-100/80 w-full min-h-screen px-10 py-4">
         {head && <Heading title={head?.title} description={head.description} />}
         <Outlet context={{ setHead }} />
       </section>

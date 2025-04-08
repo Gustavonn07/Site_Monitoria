@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { MainLayout } from "./layout";
-import { Home, Multimedia } from "./pages";
+import { Home, Multimedia, ProgrammingStructure, ProgrammingInteractive, ProgrammingStyles, IntroductionP5js, ProgrammingSound, ProgrammingFunctions, ChallengesP5 } from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
 
@@ -30,14 +30,38 @@ const publicRoutes: RouteObject[] = [
     element: <PagesLayout />,
     children: [
       {
-        path: "/programming_2",
-        element: <></>,
+        path: "/programming/introduction_p5",
+        element: <IntroductionP5js />,
+      },
+      {
+        path: "/programming/structure_p5",
+        element: <ProgrammingStructure />,
+      },
+      {
+        path: "programming/styles",
+        element: <ProgrammingStyles />,
+      },
+      {
+        path: "programming/interactive",
+        element: <ProgrammingInteractive />,
+      },
+      {
+        path: "programming/organization_and_functions",
+        element: <ProgrammingFunctions />,
+      },
+      {
+        path: "programming/sound_and_images",
+        element: <ProgrammingSound />,
+      },
+      {
+        path: "programming/challenges",
+        element: <ChallengesP5 />,
       },
       {
         path: "/multimedia_authoring_2",
         element: <Multimedia />,
       },
-    ]
+    ],
   },
   {
     path: "*",

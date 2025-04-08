@@ -11,128 +11,49 @@ export type SidebarData = {
   groupDisabled?: boolean;
 }[];
 
-export const sidebar_data_multimedia: SidebarData = [
+export const sidebar_data_multimedia: SidebarData = [];
+
+export const sidebar_data_programming: SidebarData = [
   {
-    groupTitle: "Grupo 1",
-    groupIcon: "material-symbols:10k",
+    groupTitle: "Introdução ao p5.js",
+    groupIcon: "simple-icons:p5dotjs",
     group: [
       {
-        title: "Titulo 01",
-        icon: "tabler:user",
-        link: "/batata",
+        title: "O que é p5.js",
+        icon: "mdi:lightbulb-on-outline",
+        link: "/programming/introduction_p5",
       },
       {
-        title: "Titulo 02",
-        icon: "tabler:user",
-        link: "/batata-2",
+        title: "Estrutura Básica",
+        icon: "ph:code-bold",
+        link: "/programming/structure_p5",
       },
       {
-        title: "Titulo 03",
-        icon: "tabler:user",
-        link: "/batata-3",
-      },
-    ],
-    groupDisabled: true
-  },
-  {
-    groupTitle: "Grupo 2",
-    groupIcon: "material-symbols:10k",
-    group: [
-      {
-        title: "Titulo 04",
-        icon: "tabler:user",
-        link: "/batata-4",
+        title: "Formas e Cores",
+        icon: "material-symbols:palette-outline",
+        link: "/programming/styles",
       },
       {
-        title: "Titulo 05",
-        icon: "tabler:user",
-        link: "/batata-5",
+        title: "Interatividade",
+        icon: "mdi:gesture-tap-button",
+        link: "programming/interactive",
       },
       {
-        title: "Titulo 06",
-        icon: "tabler:user",
-        link: "/batata-6",
-        disabled: true
-      },
-    ],
-  },
-  {
-    groupTitle: "Grupo 3sad asdsdd",
-    groupIcon: "material-symbols:10k",
-    group: [
-      {
-        title: "Titulo 07sad sadasdas dasd",
-        icon: "tabler:user",
-        link: "/batata-7",
+        title: "Organização/Funções",
+        icon: "mdi:function-variant",
+        link: "programming/organization_and_functions",
       },
       {
-        title: "Titulo 08",
-        icon: "tabler:user",
-        link: "/batata-8",
+        title: "Imagens e Sons",
+        icon: "mdi:image-multiple-outline",
+        link: "programming/sound_and_images",
+      },
+      {
+        title: "Desafios",
+        icon: "mdi:link-variant",
+        link: "programming/challenges",
       },
     ],
   },
 ];
 
-export const sidebar_data_programming: SidebarData = [
-  {
-    groupTitle: "Grupo 1 P",
-    groupIcon: "material-symbols:10k",
-    group: [
-      {
-        title: "Titulo 01",
-        icon: "tabler:user",
-        link: "/batata",
-      },
-      {
-        title: "Titulo 02",
-        icon: "tabler:user",
-        link: "/batata-2",
-      },
-      {
-        title: "Titulo 03",
-        icon: "tabler:user",
-        link: "/batata-3",
-      },
-    ],
-    groupDisabled: true
-  },
-  {
-    groupTitle: "Grupo 2",
-    groupIcon: "material-symbols:10k",
-    group: [
-      {
-        title: "Titulo 04",
-        icon: "tabler:user",
-        link: "/batata-4",
-      },
-      {
-        title: "Titulo 05",
-        icon: "tabler:user",
-        link: "/batata-5",
-      },
-      {
-        title: "Titulo 06",
-        icon: "tabler:user",
-        link: "/batata-6",
-        disabled: true
-      },
-    ],
-  },
-  {
-    groupTitle: "Grupo 3sad asdsdd",
-    groupIcon: "material-symbols:10k",
-    group: [
-      {
-        title: "Titulo 07sad sadasdas dasd",
-        icon: "tabler:user",
-        link: "/batata-7",
-      },
-      {
-        title: "Titulo 08",
-        icon: "tabler:user",
-        link: "/batata-8",
-      },
-    ],
-  },
-];

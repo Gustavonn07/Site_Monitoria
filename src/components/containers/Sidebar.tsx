@@ -75,7 +75,7 @@ export const Sidebar = () => {
                   hidden: isCollapsed,
                 })}
               >
-                TITULO
+                {url.includes("multimedia_authoring_2") ? 'Autoração. M. 02' : 'Programação 02'}
               </h3>
               <Icon
                 className={cn(
