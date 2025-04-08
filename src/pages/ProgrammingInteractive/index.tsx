@@ -113,7 +113,7 @@ function keyPressed() {
               </pre>
             </p>
           ),
-          sectionProps: { hasSeparatorSection: true },
+          sectionProps: { hasSeparatorSection: false },
         },
         {
           type: PageItemsType.INFO,
@@ -135,7 +135,99 @@ function keyPressed() {
             </p>
           ),
         },
+        {
+          type: PageItemsType.SECTION,
+          title: "Detectando Scroll e Movimento",
+          description: (
+            <p>
+              O p5.js também pode detectar eventos de rolagem ou movimento:
+              <ul className="list-disc list-inside mt-2">
+                <li>
+                  <code>mouseWheel(event)</code> – responde ao scroll do mouse.
+                </li>
+                <li>
+                  <code>movedX</code> e <code>movedY</code> – mostram a mudança
+                  de posição desde o último frame.
+                </li>
+              </ul>
+              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
+                {`function mouseWheel(event) {
+  print(event.delta);
+  return false;
+}`}
+              </pre>
+            </p>
+          ),
+          sectionProps: { hasSeparatorSection: true },
+        },
+        {
+          type: PageItemsType.SECTION,
+          title: "Arrastar e Soltar (Drag & Drop)",
+          description: (
+            <p>
+              Use <code>mouseDragged()</code> para detectar movimento com botão
+              pressionado:
+              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
+                {`function draw() {
+  if (mouseIsPressed) {
+    fill("blue");
+    ellipse(mouseX, mouseY, 30, 30);
+  }
+}`}
+              </pre>
+              Também é possível trabalhar com arquivos usando{" "}
+              <code>drop()</code>.
+            </p>
+          ),
+          sectionProps: { hasSeparatorSection: true },
+        },
       ]}
+      bibliography={[
+        {
+          title: "p5.js Reference – Events",
+          link: "https://p5js.org/reference/#group-Events",
+          text: "Documentação oficial sobre eventos como mousePressed, keyPressed, etc.",
+          hasSeparator: true,
+        },
+        {
+          title: "p5.js Reference – Mouse",
+          link: "https://p5js.org/reference/#group-Mouse",
+          text: "Referência para variáveis como mouseX, mouseY e mouseIsPressed.",
+          hasSeparator: true,
+        },
+        {
+          title: "p5.js Reference – Keyboard",
+          link: "https://p5js.org/reference/#group-Keyboard",
+          text: "Controle de teclas com key, keyCode e keyIsDown.",
+          hasSeparator: true,
+        },
+        {
+          title: "p5.js Reference – DOM",
+          link: "https://p5js.org/reference/#group-DOM",
+          text: "Interações com elementos HTML como botões e sliders.",
+          hasSeparator: true,
+        },
+        {
+          title: "The Coding Train – Interactivity Playlist",
+          link: "https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA",
+          text: "Série de vídeos sobre interações com mouse, teclado e elementos dinâmicos.",
+          hasSeparator: true,
+        },
+        {
+          title: "The Nature of Code – Capítulo 1",
+          link: "https://natureofcode.com/book/chapter-1-vectors/",
+          text: "Base conceitual para trabalhar com vetores e movimento em p5.js.",
+          hasSeparator: false,
+        },
+      ]}
+      goBack={{
+        link: 'programming/styles',
+        text: 'Voltar'
+      }}
+      goFoward={{
+        link: 'programming/organization_and_functions',
+        text: 'Próximo'
+      }}
     />
   );
 };

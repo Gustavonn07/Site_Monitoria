@@ -42,7 +42,7 @@ export const IntroductionP5js = () => {
               </a>
               . Se quiser incluir em um projeto próprio, adicione o seguinte
               script no seu HTML:
-              <pre className="bg-gray-100 mt-2 p-2 rounded-md text-sm overflow-auto">
+              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
                 {`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>`}
               </pre>
             </p>
@@ -84,7 +84,7 @@ export const IntroductionP5js = () => {
                 </li>
               </ul>
               Exemplo:
-              <pre className="bg-gray-100 mt-2 p-2 rounded-md text-sm overflow-auto">
+              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
                 {`function setup() {
                   createCanvas(400, 400);
                 }
@@ -119,7 +119,7 @@ export const IntroductionP5js = () => {
               </ul>
               Use <code>fill()</code> para cor interna e <code>stroke()</code>{" "}
               para borda. Exemplo:
-              <pre className="bg-gray-100 mt-2 p-2 rounded-md text-sm overflow-auto">
+              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
                 {`fill(255, 0, 0); // vermelho
 stroke(0);        // borda preta
 rect(100, 100, 50, 50);`}
@@ -150,7 +150,7 @@ rect(100, 100, 50, 50);`}
                 </li>
               </ul>
               Exemplo:
-              <pre className="bg-gray-100 mt-2 p-2 rounded-md text-sm overflow-auto">
+              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
                 {`function draw() {
   if (mouseIsPressed) {
     fill(0);
