@@ -68,6 +68,7 @@ export const PageBuilder = ({
 
   React.useEffect(() => {
     setHead({ ...head });
+    window.scrollTo(0, 0);
   }, []);
   return (
     <>
