@@ -49,7 +49,7 @@ export const sidebar_data_programming: SidebarData = [
         link: "programming/sound_and_images",
       },
       {
-        title: "Desafios/Links úteis",
+        title: "Desafios",
         icon: "mdi:link-variant",
         link: "programming/challenges",
       },

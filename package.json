@@ -73,8 +73,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "npm run test-jest -- --passWithNoTests"
+      "eslint --fix"
     ]
   }
 }

@@ -21,7 +21,7 @@ export const ChallengesP5 = () => {
       head={{
         title: "Desafios Interativos",
         description:
-          "Coloque seus conhecimentos em prática com desafios que envolvem interação com mouse, teclado, imagens e som usando p5.js.",
+          "Coloque seus conhecimentos em prática com desafios que envolvem interação com mouse e teclado usando p5.js.",
       }}
       itens={[
         {
