@@ -37,7 +37,7 @@ export const Sidebar = () => {
 
   const url = location.pathname || "";
   const sidebar_data = React.useMemo(() => {
-    return url.includes("multimedia_authoring_2")
+    return url.includes("multimedia")
       ? sidebar_data_multimedia
       : sidebar_data_programming;
   }, [url]);

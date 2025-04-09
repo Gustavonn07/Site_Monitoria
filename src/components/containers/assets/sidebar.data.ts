@@ -11,7 +11,49 @@ export type SidebarData = {
   groupDisabled?: boolean;
 }[];
 
-export const sidebar_data_multimedia: SidebarData = [];
+export const sidebar_data_multimedia: SidebarData = [
+  {
+    groupTitle: "Introdução à HTML5",
+    groupIcon: "simple-icons:html5",
+    group: [
+      {
+        title: "O que é HTML?",
+        icon: "mdi:lightbulb-on-outline",
+        link: "/multimedia/introduction_html",
+      },
+      // {
+      //   title: "Estrutura Básica",
+      //   icon: "ph:code-bold",
+      //   link: "/multimedia/structure_p5",
+      // },
+      // {
+      //   title: "Formas e Cores",
+      //   icon: "material-symbols:palette-outline",
+      //   link: "/multimedia/styles",
+      // },
+      // {
+      //   title: "Interatividade",
+      //   icon: "mdi:gesture-tap-button",
+      //   link: "multimedia/interactive",
+      // },
+      // {
+      //   title: "Organização/Funções",
+      //   icon: "mdi:function-variant",
+      //   link: "multimedia/organization_and_functions",
+      // },
+      // {
+      //   title: "Imagens e Sons",
+      //   icon: "mdi:image-multiple-outline",
+      //   link: "multimedia/sound_and_images",
+      // },
+      // {
+      //   title: "Desafios",
+      //   icon: "mdi:link-variant",
+      //   link: "multimedia/challenges",
+      // },
+    ],
+  },
+];
 
 export const sidebar_data_programming: SidebarData = [
   {
