@@ -66,12 +66,12 @@ function draw() {
             <p>
               Para adicionar áudio, use <code>loadSound()</code>. É necessário
               importar a biblioteca de som do p5.
-              <ul className="list-disc list-inside mt-2">
-                <li>
+              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
+                <div>
                   Adicione no HTML:{" "}
-                  <code>{`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>`}</code>
-                </li>
-              </ul>
+                  <code className="">{`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>`}</code>
+                </div>
+              </pre>
               Exemplo:
               <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
                 {`let som;
