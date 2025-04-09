@@ -31,16 +31,16 @@ export const sidebar_data_multimedia: SidebarData = [
         icon: "hugeicons:structure-04",
         link: "/multimedia/structures_base",
       },
-      // {
-      //   title: "Interatividade",
-      //   icon: "mdi:gesture-tap-button",
-      //   link: "multimedia/interactive",
-      // },
-      // {
-      //   title: "Organização/Funções",
-      //   icon: "mdi:function-variant",
-      //   link: "multimedia/organization_and_functions",
-      // },
+      {
+        title: "Links e Navegação",
+        icon: "tdesign:link",
+        link: "multimedia/navigation",
+      },
+      {
+        title: "Imagens",
+        icon: "mdi:images-outline",
+        link: "multimedia/images",
+      },
       // {
       //   title: "Imagens e Sons",
       //   icon: "mdi:image-multiple-outline",

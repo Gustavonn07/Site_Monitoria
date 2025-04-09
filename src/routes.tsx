@@ -11,6 +11,8 @@ import {
   ProgrammingFunctions,
   ChallengesP5,
   HTMLTagsPage,
+  HTMLStructurePage,
+  HTMLLinksPage,
 } from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
@@ -64,6 +66,14 @@ const publicRoutes: RouteObject[] = [
       {
         path: "/multimedia/formatting_tags",
         element: <HTMLTagsPage />,
+      },
+      {
+        path: "/multimedia/structures_base",
+        element: <HTMLStructurePage />,
+      },
+      {
+        path: "/multimedia/navigation",
+        element: <HTMLLinksPage />,
       },
     ],
   },
