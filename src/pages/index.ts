@@ -1,6 +1,6 @@
 export * from './Home'
 export * from './Multimedia'
-export * from './IntroductionP5'
+export * from './ProgrammingIntroductionP5'
 export * from './ProgrammingStructure'
 export * from './ProgrammingOrganizationFunctions'
 export * from './ProgrammingInteractive'

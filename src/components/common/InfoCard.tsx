@@ -26,7 +26,7 @@ export const InfoCard = ({
     <>
       <article
         className={cn(
-          "bg-secondary-100 rounded-lg p-10 shadow-lg w-full",
+          "bg-secondary-100 rounded-lg sm:p-10 p-5 shadow-lg w-full",
           className
         )}
       >
