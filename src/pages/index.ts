@@ -1,4 +1,5 @@
 export * from './Home'
+export * from './MultimediaTags'
 export * from './MultimediaIntroductionHTML'
 export * from './ProgrammingIntroductionP5'
 export * from './ProgrammingStructure'

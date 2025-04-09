@@ -150,13 +150,9 @@ export const IntroductionHTML5 = () => {
           text: "Referência completa para HTML com exemplos interativos.",
         },
       ]}
-      goBack={{
-        text: "Voltar",
-        link: "html/introduction",
-      }}
       goFoward={{
         text: "Próximo",
-        link: "html/formatting_tags",
+        link: "multimedia/formatting_tags",
       }}
     />
   );

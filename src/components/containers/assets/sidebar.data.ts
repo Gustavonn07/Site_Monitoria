@@ -21,16 +21,16 @@ export const sidebar_data_multimedia: SidebarData = [
         icon: "mdi:lightbulb-on-outline",
         link: "/multimedia/introduction_html",
       },
-      // {
-      //   title: "Estrutura Básica",
-      //   icon: "ph:code-bold",
-      //   link: "/multimedia/structure_p5",
-      // },
-      // {
-      //   title: "Formas e Cores",
-      //   icon: "material-symbols:palette-outline",
-      //   link: "/multimedia/styles",
-      // },
+      {
+        title: "Tags e Elementos",
+        icon: "ph:code-bold",
+        link: "/multimedia/formatting_tags",
+      },
+      {
+        title: "Estruturas Basicas",
+        icon: "hugeicons:structure-04",
+        link: "/multimedia/structures_base",
+      },
       // {
       //   title: "Interatividade",
       //   icon: "mdi:gesture-tap-button",

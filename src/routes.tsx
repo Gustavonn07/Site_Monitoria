@@ -1,20 +1,20 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { MainLayout } from "./layout";
-import { Home, IntroductionHTML5, ProgrammingStructure, ProgrammingInteractive, ProgrammingStyles, IntroductionP5js, ProgrammingSound, ProgrammingFunctions, ChallengesP5 } from "./pages";
+import {
+  Home,
+  IntroductionHTML5,
+  ProgrammingStructure,
+  ProgrammingInteractive,
+  ProgrammingStyles,
+  IntroductionP5js,
+  ProgrammingSound,
+  ProgrammingFunctions,
+  ChallengesP5,
+  HTMLTagsPage,
+} from "./pages";
 import { PrivateRoutes } from "./components";
 import { PagesLayout } from "./layout/PagesLayout";
 
-const privateRoutes: RouteObject[] = [
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: "/private",
-        element: <div>ROTA_PRIVADA</div>,
-      },
-    ],
-  },
-];
 
 const publicRoutes: RouteObject[] = [
   {
@@ -61,6 +61,10 @@ const publicRoutes: RouteObject[] = [
         path: "/multimedia/introduction_html",
         element: <IntroductionHTML5 />,
       },
+      {
+        path: "/multimedia/formatting_tags",
+        element: <HTMLTagsPage />,
+      },
     ],
   },
   {
@@ -70,10 +74,6 @@ const publicRoutes: RouteObject[] = [
 ];
 
 const routesList: RouteObject[] = [
-  {
-    element: <PrivateRoutes />,
-    children: privateRoutes,
-  },
   ...publicRoutes,
 ];
 
