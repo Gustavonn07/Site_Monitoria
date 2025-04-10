@@ -11,7 +11,59 @@ export type SidebarData = {
   groupDisabled?: boolean;
 }[];
 
-export const sidebar_data_multimedia: SidebarData = [];
+export const sidebar_data_multimedia: SidebarData = [
+  {
+    groupTitle: "Introdução à HTML5",
+    groupIcon: "simple-icons:html5",
+    group: [
+      {
+        title: "O que é HTML?",
+        icon: "mdi:lightbulb-on-outline",
+        link: "/multimedia/introduction_html",
+      },
+      {
+        title: "Tags e Elementos",
+        icon: "ph:code-bold",
+        link: "/multimedia/formatting_tags",
+      },
+      {
+        title: "Estruturas Basicas",
+        icon: "hugeicons:structure-04",
+        link: "/multimedia/structures_base",
+      },
+      {
+        title: "Links e Navegação",
+        icon: "tdesign:link",
+        link: "multimedia/navigation",
+      },
+      {
+        title: "Imagens",
+        icon: "mdi:images-outline",
+        link: "multimedia/images",
+      },
+      {
+        title: "Tabelas",
+        icon: "tabler:table",
+        link: "multimedia/tables",
+      },
+      {
+        title: "Formulários",
+        icon: "mdi:form-outline",
+        link: "multimedia/forms",
+      },
+      {
+        title: "Tags Semânticas",
+        icon: "material-symbols:check-rounded",
+        link: "multimedia/semantic_tags",
+      },
+      {
+        title: "Desafios",
+        icon: "mdi:link-variant",
+        link: "multimedia/challenges_html",
+      },
+    ],
+  },
+];
 
 export const sidebar_data_programming: SidebarData = [
   {

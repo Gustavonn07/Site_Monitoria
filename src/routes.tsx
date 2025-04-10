@@ -1,20 +1,25 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-import { MainLayout } from "./layout";
-import { Home, Multimedia, ProgrammingStructure, ProgrammingInteractive, ProgrammingStyles, IntroductionP5js, ProgrammingSound, ProgrammingFunctions, ChallengesP5 } from "./pages";
-import { PrivateRoutes } from "./components";
-import { PagesLayout } from "./layout/PagesLayout";
+import { MainLayout, PagesLayout } from "./layout";
+import {
+  Home,
+  IntroductionHTML5,
+  ProgrammingStructure,
+  ProgrammingInteractive,
+  ProgrammingStyles,
+  IntroductionP5js,
+  ProgrammingSound,
+  ProgrammingFunctions,
+  ChallengesP5,
+  HTMLTagsPage,
+  HTMLStructurePage,
+  HTMLLinksPage,
+  MultimediaImages,
+  MultimediaTables,
+  MultimediaForms,
+  SemanticTags,
+  MultimediaChallengesHtml,
+} from "./pages";
 
-const privateRoutes: RouteObject[] = [
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: "/private",
-        element: <div>ROTA_PRIVADA</div>,
-      },
-    ],
-  },
-];
 
 const publicRoutes: RouteObject[] = [
   {
@@ -58,8 +63,40 @@ const publicRoutes: RouteObject[] = [
         element: <ChallengesP5 />,
       },
       {
-        path: "/multimedia_authoring_2",
-        element: <Multimedia />,
+        path: "/multimedia/introduction_html",
+        element: <IntroductionHTML5 />,
+      },
+      {
+        path: "/multimedia/formatting_tags",
+        element: <HTMLTagsPage />,
+      },
+      {
+        path: "/multimedia/structures_base",
+        element: <HTMLStructurePage />,
+      },
+      {
+        path: "/multimedia/navigation",
+        element: <HTMLLinksPage />,
+      },
+      {
+        path: "/multimedia/images",
+        element: <MultimediaImages />,
+      },
+      {
+        path: "/multimedia/tables",
+        element: <MultimediaTables />,
+      },
+      {
+        path: "/multimedia/forms",
+        element: <MultimediaForms />,
+      },
+      {
+        path: "/multimedia/semantic_tags",
+        element: <SemanticTags />,
+      },
+      {
+        path: "/multimedia/challenges_html",
+        element: <MultimediaChallengesHtml />,
       },
     ],
   },
@@ -70,10 +107,6 @@ const publicRoutes: RouteObject[] = [
 ];
 
 const routesList: RouteObject[] = [
-  {
-    element: <PrivateRoutes />,
-    children: privateRoutes,
-  },
   ...publicRoutes,
 ];
 

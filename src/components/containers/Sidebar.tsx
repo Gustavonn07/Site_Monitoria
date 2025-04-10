@@ -36,11 +36,9 @@ export const Sidebar = () => {
   };
 
   const url = location.pathname || "";
-  const sidebar_data = React.useMemo(() => {
-    return url.includes("multimedia_authoring_2")
-      ? sidebar_data_multimedia
-      : sidebar_data_programming;
-  }, [url]);
+  const sidebar_data = url.includes("multimedia")
+    ? sidebar_data_multimedia
+    : sidebar_data_programming;
 
   return (
     <>
@@ -57,7 +55,7 @@ export const Sidebar = () => {
           <SheetContent side="left" className="max-w-[80%] sm:w-[300px] p-4">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold text-primary-800">
-                {url.includes("multimedia_authoring_2")
+                {url.includes("multimedia")
                   ? "Autoração M. 02"
                   : "Programação 02"}
               </h3>
@@ -128,7 +126,7 @@ export const Sidebar = () => {
                   hidden: isCollapsed,
                 })}
               >
-                {url.includes("multimedia_authoring_2")
+                {url.includes("multimedia")
                   ? "Autoração. M. 02"
                   : "Programação 02"}
               </h3>

@@ -36,7 +36,7 @@ export const Home = () => {
               backgroundImage: "url('images/home_computer.jpg')",
               clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)",
             }}
-            onClick={() => navigate("/multimedia_authoring_2")}
+            onClick={() => navigate("/multimedia/introduction_html")}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/40 to-black/40 transition-opacity duration-300 group-hover:opacity-0" />
             <h2 className="text-current text-2xl lg:text-4xl font-bold z-20 mb-10">
@@ -54,7 +54,7 @@ export const Home = () => {
           />
           <CardHome
             img="images/home_computer.jpg"
-            link="/multimedia_authoring_2"
+            link="/multimedia/introduction_html"
             title="Autoração Multimídia 02"
           />
         </ul>
