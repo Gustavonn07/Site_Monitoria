@@ -41,16 +41,26 @@ export const sidebar_data_multimedia: SidebarData = [
         icon: "mdi:images-outline",
         link: "multimedia/images",
       },
-      // {
-      //   title: "Imagens e Sons",
-      //   icon: "mdi:image-multiple-outline",
-      //   link: "multimedia/sound_and_images",
-      // },
-      // {
-      //   title: "Desafios",
-      //   icon: "mdi:link-variant",
-      //   link: "multimedia/challenges",
-      // },
+      {
+        title: "Tabelas",
+        icon: "tabler:table",
+        link: "multimedia/tables",
+      },
+      {
+        title: "Formulários",
+        icon: "mdi:form-outline",
+        link: "multimedia/forms",
+      },
+      {
+        title: "Tags Semânticas",
+        icon: "material-symbols:check-rounded",
+        link: "multimedia/semantic_tags",
+      },
+      {
+        title: "Desafios",
+        icon: "mdi:link-variant",
+        link: "multimedia/challenges_html",
+      },
     ],
   },
 ];

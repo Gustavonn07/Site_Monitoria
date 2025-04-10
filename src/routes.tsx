@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-import { MainLayout } from "./layout";
+import { MainLayout, PagesLayout } from "./layout";
 import {
   Home,
   IntroductionHTML5,
@@ -13,9 +13,12 @@ import {
   HTMLTagsPage,
   HTMLStructurePage,
   HTMLLinksPage,
+  MultimediaImages,
+  MultimediaTables,
+  MultimediaForms,
+  SemanticTags,
+  MultimediaChallengesHtml,
 } from "./pages";
-import { PrivateRoutes } from "./components";
-import { PagesLayout } from "./layout/PagesLayout";
 
 
 const publicRoutes: RouteObject[] = [
@@ -74,6 +77,26 @@ const publicRoutes: RouteObject[] = [
       {
         path: "/multimedia/navigation",
         element: <HTMLLinksPage />,
+      },
+      {
+        path: "/multimedia/images",
+        element: <MultimediaImages />,
+      },
+      {
+        path: "/multimedia/tables",
+        element: <MultimediaTables />,
+      },
+      {
+        path: "/multimedia/forms",
+        element: <MultimediaForms />,
+      },
+      {
+        path: "/multimedia/semantic_tags",
+        element: <SemanticTags />,
+      },
+      {
+        path: "/multimedia/challenges_html",
+        element: <MultimediaChallengesHtml />,
       },
     ],
   },
