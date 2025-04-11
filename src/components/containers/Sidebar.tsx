@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Button,
   Separator,
   Sheet,
   SheetContent,
@@ -62,6 +63,16 @@ export const Sidebar = () => {
             </div>
             <Separator />
             <div className="flex flex-col gap-4 mt-4">
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  navigate("/");
+                  setIsOpen(false);
+                }}
+              >
+                <Icon icon="tabler:chevron-left" className="w-4 h-4" />
+                <span>Ir para tela Inicial</span>
+              </Button>
               {sidebar_data.map((group) => (
                 <div key={group.groupTitle}>
                   <div
@@ -78,6 +89,12 @@ export const Sidebar = () => {
                   >
                     <Icon icon={group.groupIcon} className="text-xl" />
                     <span>{group.groupTitle}</span>
+                    <Icon
+                      className={cn("ml-auto duration-150", {
+                        "rotate-180": expandedGroups.includes(group.groupTitle),
+                      })}
+                      icon="tabler:chevron-down"
+                    />
                   </div>
                   <ul
                     className={cn("ml-5 mt-2 space-y-2", {
@@ -94,9 +111,12 @@ export const Sidebar = () => {
                           setIsOpen(false);
                         }}
                         className={cn(
-                          "flex items-center gap-2 text-primary-700 text-base hover:text-secondary-700 cursor-pointer",
+                          "flex items-center px-2 py-1.5 gap-2 text-primary-700 text-base hover:text-secondary-700 cursor-pointer",
                           {
                             "opacity-50 cursor-not-allowed": item.disabled,
+                            "bg-secondary-500 text-primary-100 rounded": url.includes(
+                              item.link
+                            ),
                           }
                         )}
                       >
@@ -144,6 +164,20 @@ export const Sidebar = () => {
                 }}
               />
             </div>
+
+            {!isCollapsed && (
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  navigate("/");
+                  setIsOpen(false);
+                }}
+                className="w-full"
+              >
+                <Icon icon="tabler:chevron-left" className="w-4 h-4" />
+                <span>Ir para tela Inicial</span>
+              </Button>
+            )}
             <Separator />
           </div>
           {sidebar_data.map((item) => (
@@ -183,6 +217,15 @@ export const Sidebar = () => {
                             : 10,
                         })}
                       </span>
+                      <Icon
+                        className={cn("ml-auto duration-150", {
+                          hidden: isCollapsed,
+                          "rotate-180": expandedGroups.includes(
+                            item.groupTitle
+                          ),
+                        })}
+                        icon="tabler:chevron-down"
+                      />
                     </h3>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -208,6 +251,9 @@ export const Sidebar = () => {
                               "opacity-50 cursor-not-allowed": item.disabled,
                               "hover:text-secondary-700 hover:bg-primary-300":
                                 !item.disabled,
+                              "bg-secondary-500 text-primary-100": url.includes(
+                                item.link
+                              ),
                             }
                           )}
                           onClick={() => {
