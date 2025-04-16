@@ -76,6 +76,11 @@ export const sidebar_data_programming: SidebarData = [
         link: "/programming/introduction_p5",
       },
       {
+        title: "Fundamentos do JS",
+        icon: "mdi:code-json",
+        link: "programming/js_fundamentals",
+      },
+      {
         title: "Estrutura Básica",
         icon: "ph:code-bold",
         link: "/programming/structure_p5",

@@ -22,29 +22,29 @@ export const ProgrammingStructure = () => {
                 <div>
                   <p className="font-semibold mb-2">Exemplo com <code>background()</code>:</p>
                   <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-        {`function setup() {
-          createCanvas(400, 400);
-        }
-        
-        function draw() {
-          background(255);
-          ellipse(mouseX, mouseY, 50, 50);
-        }`}
+{`function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  ellipse(mouseX, mouseY, 50, 50);
+}`}
                   </pre>
                 </div>
         
                 <div>
                   <p className="font-semibold mb-2">Exemplo com <code>clear()</code>:</p>
                   <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-        {`function setup() {
-          createCanvas(400, 400);
-        }
-        
-        function draw() {
-          clear();
-          fill(100, 200, 255);
-          ellipse(mouseX, mouseY, 50, 50);
-        }`}
+{`function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  clear();
+  fill(100, 200, 255);
+  ellipse(mouseX, mouseY, 50, 50);
+}`}
                   </pre>
                 </div>
               </div>
@@ -138,7 +138,7 @@ function draw() {
       ]}
       goBack={{
         text: "Voltar",
-        link: "programming/introduction_p5",
+        link: "programming/js_fundamentals",
       }}
       goFoward={{
         text: "Próximo",
