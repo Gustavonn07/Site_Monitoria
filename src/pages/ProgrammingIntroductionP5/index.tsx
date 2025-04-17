@@ -205,7 +205,7 @@ rect(100, 100, 50, 50);`}
       }}
       goFoward={{
         text: "Próximo",
-        link: "programming/structure_p5",
+        link: "programming/js_fundamentals",
       }}
     />
   );

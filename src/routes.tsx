@@ -18,6 +18,7 @@ import {
   MultimediaForms,
   SemanticTags,
   MultimediaChallengesHtml,
+  ProgrammingFundamentals
 } from "./pages";
 
 
@@ -61,6 +62,10 @@ const publicRoutes: RouteObject[] = [
       {
         path: "programming/challenges",
         element: <ChallengesP5 />,
+      },
+      {
+        path: "programming/js_fundamentals",
+        element: <ProgrammingFundamentals />,
       },
       {
         path: "/multimedia/introduction_html",
