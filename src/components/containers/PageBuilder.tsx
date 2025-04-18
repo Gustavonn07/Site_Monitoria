@@ -12,6 +12,7 @@ import { HeadingProps } from "./Heading";
 import { Button, buttonVariants } from "../ui";
 import { cn } from "../../utils";
 import React from "react";
+import { Quiz } from "../common/Quiz";
 
 export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
   head: HeadingProps;
@@ -36,6 +37,8 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
       variant?: VariantProps<typeof pageSectionVariant>;
     };
     extraSection?: React.JSX.Element;
+    question?: string;
+    options?: {option: string, isCorrect: boolean}[];
   }[];
   bibliography?: {
     title: string;
@@ -116,6 +119,13 @@ export const PageBuilder = ({
                 }}
                 hasSeparator={item?.infoProps?.hasSeparatorInfo}
                 className={item?.infoProps?.className}
+              />
+            )}
+            {item.type === PageItemsType.QUIZ && (
+              <Quiz 
+                title={item.title}
+                question={item.question ?? ""}
+                options={item.options ?? []} 
               />
             )}
             {item.type === PageItemsType.EXTRA && item.extraSection}
