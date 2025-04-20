@@ -6,6 +6,7 @@ import {
   InfoCard,
   PageSection,
   pageSectionVariant,
+  Quiz
 } from "../common";
 import { PageItemsType } from "../../@types";
 import { HeadingProps } from "./Heading";
@@ -36,6 +37,8 @@ export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
       variant?: VariantProps<typeof pageSectionVariant>;
     };
     extraSection?: React.JSX.Element;
+    question?: string;
+    options?: {option: string, isCorrect: boolean}[];
   }[];
   bibliography?: {
     title: string;
@@ -116,6 +119,13 @@ export const PageBuilder = ({
                 }}
                 hasSeparator={item?.infoProps?.hasSeparatorInfo}
                 className={item?.infoProps?.className}
+              />
+            )}
+            {item.type === PageItemsType.QUIZ && (
+              <Quiz 
+                title={item.title}
+                question={item.question ?? ""}
+                options={item.options ?? []} 
               />
             )}
             {item.type === PageItemsType.EXTRA && item.extraSection}
