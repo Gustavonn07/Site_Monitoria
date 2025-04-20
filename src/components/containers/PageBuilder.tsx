@@ -6,13 +6,13 @@ import {
   InfoCard,
   PageSection,
   pageSectionVariant,
+  Quiz
 } from "../common";
 import { PageItemsType } from "../../@types";
 import { HeadingProps } from "./Heading";
 import { Button, buttonVariants } from "../ui";
 import { cn } from "../../utils";
 import React from "react";
-import { Quiz } from "../common/Quiz";
 
 export interface TypePageBuilder extends React.HtmlHTMLAttributes<HTMLElement> {
   head: HeadingProps;

@@ -37,7 +37,7 @@ export const Quiz = ({title, question, options}:PropsQuiz) => {
                         }`}>
                             <p>{option.option}</p>
                         </div>  
-                    )) 
+                    ))
                     : options.map(option => (
                         <div onClick={() => handlerAnswerClick(option)} className="cursor-pointer border rounded-sm border-secondary-100 p-2 duration-100 hover:bg-secondary-100">
                             <p>{option.option}</p>
