@@ -110,6 +110,42 @@ export const sidebar_data_programming: SidebarData = [
         icon: "mdi:link-variant",
         link: "programming/challenges",
       },
+    ]
+  },
+  {
+    groupTitle: "Funções",
+    groupIcon: "mdi:function",
+    group: [
+      {
+        title: "Introdução às Funções",
+        icon: "mdi:function",
+        link: "/programming/functions_intro",
+      },
+      {
+        title: "Parâmetros e Retorno",
+        icon: "mdi:variable",
+        link: "/programming/functions_params",
+      },
+      {
+        title: "Escopo e Closures",
+        icon: "mdi:lock-outline",
+        link: "/programming/functions_scope_closure",
+      },
+      {
+        title: "Funções Construtoras",
+        icon: "mdi:hammer-screwdriver",
+        link: "/programming/functions_constructor",
+      },
+      {
+        title: "Funções Geradoras (yield)",
+        icon: "mdi:repeat-once",
+        link: "/programming/functions_generators",
+      },
+      {
+        title: "Funções Recursivas",
+        icon: "mdi:sync",
+        link: "/programming/functions_recursion",
+      },
     ],
   },
 ];

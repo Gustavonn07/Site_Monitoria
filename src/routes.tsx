@@ -18,8 +18,14 @@ import {
   MultimediaForms,
   SemanticTags,
   MultimediaChallengesHtml,
-  ProgrammingFundamentals
+  ProgrammingFundamentals,
+  FunctionsIntro,
+  FunctionsParams
 } from "./pages";
+import { ScopePage } from "./pages/ProgrammingScoupe";
+import { ConstructorFunctionsPage } from "./pages/ProgrammingConstructorFunctionsPage";
+import { GeneratorFunctionsPage } from "./pages/ProgrammingGeneratorFunctionsPage";
+import { RecursiveFunctionsPage } from "./pages/ProgrammingRecursiveFunctionsPage";
 
 
 const publicRoutes: RouteObject[] = [
@@ -102,6 +108,30 @@ const publicRoutes: RouteObject[] = [
       {
         path: "/multimedia/challenges_html",
         element: <MultimediaChallengesHtml />,
+      },
+      {
+        path: "/programming/functions_intro",
+        element: <FunctionsIntro />
+      },
+      {
+        path: "/programming/functions_params",
+        element: <FunctionsParams />
+      },
+      {
+        path: "/programming/functions_scope_closure",
+        element: <ScopePage />
+      },
+      {
+        path: "/programming/functions_constructor",
+        element: <ConstructorFunctionsPage />
+      },
+      {
+        path: "/programming/functions_generators",
+        element: <GeneratorFunctionsPage />
+      },
+      {
+        path: "/programming/functions_recursion",
+        element: <RecursiveFunctionsPage />
       },
     ],
   },
