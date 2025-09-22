@@ -32,8 +32,8 @@ export const Quiz = ({title, question, options}:PropsQuiz) => {
                             option == currentOption 
                             ? gotIt
                                 ? "border rounded-sm border-green-500 text-green-500 p-2" 
-                                : "border rounded-sm border-red-500 border-red-500 text-red-500 p-2"
-                            : "border rounded-sm border-gray-500 border-gray-500 text-gray-500 p-2"
+                                : "border rounded-sm border-red-500 text-red-500 p-2"
+                            : "border rounded-sm border-gray-500 text-gray-500 p-2"
                         }`}>
                             <p>{option.option}</p>
                         </div>  
