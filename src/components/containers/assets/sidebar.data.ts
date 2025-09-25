@@ -63,6 +63,42 @@ export const sidebar_data_multimedia: SidebarData = [
       },
     ],
   },
+  {
+    groupTitle: "Formulários",
+    groupIcon: "mdi:form-textbox",
+    group: [
+      {
+        title: "Input Text",
+        icon: "mdi:form-textbox",
+        link: "/multimedia/forms_input",
+      },
+      {
+        title: "Select e Option",
+        icon: "mdi:menu-down",
+        link: "/multimedia/forms_select_option",
+      },
+      {
+        title: "Textarea",
+        icon: "mdi:text-box-multiple",
+        link: "/multimedia/forms_textarea",
+      },
+      {
+        title: "Botões (Submit, Reset, Button)",
+        icon: "mdi:gesture-tap-button",
+        link: "/multimedia/forms_buttons",
+      },
+      {
+        title: "Validação de Formulários",
+        icon: "mdi:check-circle-outline",
+        link: "/multimedia/forms_validation",
+      },
+      {
+        title: "Envio de Formulário",
+        icon: "mdi:send",
+        link: "/multimedia/forms_submission",
+      },
+    ],
+  },
 ];
 
 export const sidebar_data_programming: SidebarData = [
