@@ -26,6 +26,12 @@ import { ScopePage } from "./pages/ProgrammingScoupe";
 import { ConstructorFunctionsPage } from "./pages/ProgrammingConstructorFunctionsPage";
 import { GeneratorFunctionsPage } from "./pages/ProgrammingGeneratorFunctionsPage";
 import { RecursiveFunctionsPage } from "./pages/ProgrammingRecursiveFunctionsPage";
+import { FormsInputPage } from "./pages/MultimediaFormInputText";
+import { FormsSelectOptionPage } from "./pages/MultimediaFormSelect";
+import { FormsTextareaPage } from "./pages/MultimediaTextArea";
+import { FormsButtonsPage } from "./pages/MultimediaButtons";
+import { FormsValidationPage } from "./pages/MultimediaValidation";
+import { FormsSubmissionPage } from "./pages/MultimediaFormSubmission";
 
 
 const publicRoutes: RouteObject[] = [
@@ -108,6 +114,30 @@ const publicRoutes: RouteObject[] = [
       {
         path: "/multimedia/challenges_html",
         element: <MultimediaChallengesHtml />,
+      },
+      {
+        path: "/multimedia/forms_input",
+        element: <FormsInputPage />,
+      },
+      {
+        path: "/multimedia/forms_select_option",
+        element: <FormsSelectOptionPage />,
+      },
+      {
+        path: "/multimedia/forms_textarea",
+        element: <FormsTextareaPage />,
+      },
+      {
+        path: "/multimedia/forms_buttons",
+        element: <FormsButtonsPage />,
+      },
+      {
+        path: "/multimedia/forms_validation",
+        element: <FormsValidationPage />,
+      },
+      {
+        path: "/multimedia/forms_submission",
+        element: <FormsSubmissionPage />,
       },
       {
         path: "/programming/functions_intro",
