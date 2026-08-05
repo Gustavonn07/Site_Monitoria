@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ScopePage = () => {
   return (
@@ -48,8 +49,7 @@ export const ScopePage = () => {
           type: PageItemsType.SECTION,
           title: "Exemplo Prático",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`let globalVar = "Sou global";
+            <CodeBlock language="javascript" code={`let globalVar = "Sou global";
 
 function exemplo() {
   let localVar = "Sou local";
@@ -62,8 +62,7 @@ function exemplo() {
   console.log(blockVar);    // ❌ erro
 }
 
-exemplo();`}
-            </pre>
+exemplo();`} />
           ),
           sectionProps: {
             hasSeparatorSection: true,
@@ -78,8 +77,7 @@ exemplo();`}
                 Uma <strong>closure</strong> ocorre quando uma função "lembra" 
                 do escopo em que foi criada, mesmo após o escopo externo ter sido finalizado.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function contador() {
+              <CodeBlock language="javascript" code={`function contador() {
   let count = 0; // variável privada
 
   return function () {
@@ -93,8 +91,7 @@ const meuContador = contador();
 console.log(meuContador()); // 1
 console.log(meuContador()); // 2
 console.log(meuContador()); // 3
-`}
-              </pre>
+`} />
               <p>
                 Closures são úteis para criar funções com estado privado, 
                 gerar funções dinâmicas e implementar padrões como o módulo.

@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsInputPage = () => {
   return (
@@ -20,12 +21,10 @@ export const FormsInputPage = () => {
                 um <code>&lt;label&gt;</code>, que indica ao usuário o que deve
                 ser preenchido.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form>
+              <CodeBlock language="html" code={`<form>
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
-</form>`}
-              </pre>
+</form>`} />
             </>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -64,10 +63,8 @@ export const FormsInputPage = () => {
                 O tipo <code>text</code> é usado para inserir dados de texto
                 livre, como nomes ou endereços.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Nome:</label>
-<input type="text" name="nome" placeholder="Digite seu nome">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Nome:</label>
+<input type="text" name="nome" placeholder="Digite seu nome">`} />
             </>
           ),
         },
@@ -80,10 +77,8 @@ export const FormsInputPage = () => {
                 O tipo <code>password</code> oculta os caracteres digitados,
                 ideal para senhas e dados confidenciais.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Senha:</label>
-<input type="password" name="senha" required>`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Senha:</label>
+<input type="password" name="senha" required>`} />
             </>
           ),
         },
@@ -96,10 +91,8 @@ export const FormsInputPage = () => {
                 O tipo <code>email</code> valida automaticamente o formato de um
                 endereço de email.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Email:</label>
-<input type="email" name="email" placeholder="exemplo@email.com">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Email:</label>
+<input type="email" name="email" placeholder="exemplo@email.com">`} />
             </>
           ),
         },
@@ -112,10 +105,8 @@ export const FormsInputPage = () => {
                 O tipo <code>number</code> permite apenas números e pode ter
                 valores mínimos e máximos definidos.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Idade:</label>
-<input type="number" name="idade" min="1" max="120">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Idade:</label>
+<input type="number" name="idade" min="1" max="120">`} />
             </>
           ),
         },
@@ -128,10 +119,8 @@ export const FormsInputPage = () => {
                 O tipo <code>date</code> exibe um seletor de calendário para
                 facilitar a escolha de datas.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Data de Nascimento:</label>
-<input type="date" name="nascimento">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Data de Nascimento:</label>
+<input type="date" name="nascimento">`} />
             </>
           ),
         },
@@ -144,12 +133,10 @@ export const FormsInputPage = () => {
                 O tipo <code>checkbox</code> permite marcar ou desmarcar opções
                 independentes.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>
+              <CodeBlock language="html" code={`<label>
   <input type="checkbox" name="newsletter">
   Desejo receber novidades
-</label>`}
-              </pre>
+</label>`} />
             </>
           ),
         },
@@ -163,14 +150,12 @@ export const FormsInputPage = () => {
                 entre várias, agrupadas pelo mesmo atributo{" "}
                 <code>name</code>.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>
+              <CodeBlock language="html" code={`<label>
   <input type="radio" name="sexo" value="M"> Masculino
 </label>
 <label>
   <input type="radio" name="sexo" value="F"> Feminino
-</label>`}
-              </pre>
+</label>`} />
             </>
           ),
         },
@@ -183,10 +168,8 @@ export const FormsInputPage = () => {
                 O tipo <code>color</code> abre um seletor de cores para o
                 usuário escolher.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Escolha uma cor:</label>
-<input type="color" name="cor">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Escolha uma cor:</label>
+<input type="color" name="cor">`} />
             </>
           ),
         },
@@ -199,10 +182,8 @@ export const FormsInputPage = () => {
                 O tipo <code>file</code> permite selecionar arquivos do sistema
                 do usuário.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Selecione um arquivo:</label>
-<input type="file" name="documento">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Selecione um arquivo:</label>
+<input type="file" name="documento">`} />
             </>
           ),
         },
@@ -215,10 +196,8 @@ export const FormsInputPage = () => {
                 O tipo <code>range</code> cria um controle deslizante que varia
                 entre valores definidos.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Nível de satisfação:</label>
-<input type="range" name="satisfacao" min="0" max="10">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Nível de satisfação:</label>
+<input type="range" name="satisfacao" min="0" max="10">`} />
             </>
           ),
         },
@@ -231,9 +210,7 @@ export const FormsInputPage = () => {
                 O tipo <code>hidden</code> armazena informações que não são
                 visíveis para o usuário, mas são enviadas junto ao formulário.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<input type="hidden" name="id_usuario" value="12345">`}
-              </pre>
+              <CodeBlock language="html" code={`<input type="hidden" name="id_usuario" value="12345">`} />
             </>
           ),
         },
@@ -247,11 +224,9 @@ export const FormsInputPage = () => {
                 <code>button</code> criam botões com diferentes funções: enviar
                 formulário, limpar campos ou executar uma ação.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<input type="submit" value="Enviar">
+              <CodeBlock language="html" code={`<input type="submit" value="Enviar">
 <input type="reset" value="Limpar">
-<input type="button" value="Clique aqui">`}
-              </pre>
+<input type="button" value="Clique aqui">`} />
             </>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -278,7 +253,7 @@ export const FormsInputPage = () => {
       ]}
       goBack={{
         text: "Voltar",
-        link: "",
+        link: "multimedia/challenges_html",
       }}
       goFoward={{
         text: "Próximo",

@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingStyles = () => {
   return (
@@ -25,37 +26,31 @@ export const ProgrammingStyles = () => {
                   <strong>preload()</strong> – Usado para carregar arquivos
                   antes do sketch iniciar (ex: <code>loadImage</code>,{" "}
                   <code>loadSound</code>).
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`let img;
+                  <CodeBlock language="javascript" code={`let img;
         
 function preload() {
   img = loadImage('imagem.jpg');
-}`}
-                  </pre>
+}`} />
                 </li>
 
                 <li className="mt-4">
                   <strong>setup()</strong> – Executado uma única vez. Ideal para
                   criar o canvas, definir estilos iniciais e configurar
                   variáveis.
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`function setup() {
+                  <CodeBlock language="javascript" code={`function setup() {
   createCanvas(400, 400);
   background(200);
   textSize(24);
-}`}
-                  </pre>
+}`} />
                 </li>
 
                 <li className="mt-4">
                   <strong>draw()</strong> – Roda continuamente (em loop) a cerca
                   de 60 quadros por segundo. Usado para animações e atualizações
                   visuais.
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`function draw() {
+                  <CodeBlock language="javascript" code={`function draw() {
   ellipse(mouseX, mouseY, 30, 30);
-}`}
-                  </pre>
+}`} />
                 </li>
               </ul>
 
@@ -67,32 +62,26 @@ function preload() {
                 <li>
                   <code>mousePressed()</code> – Disparada quando o mouse é
                   clicado.
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`function mousePressed() {
+                  <CodeBlock language="javascript" code={`function mousePressed() {
   console.log("Clique detectado!");
-}`}
-                  </pre>
+}`} />
                 </li>
 
                 <li className="mt-2">
                   <code>keyPressed()</code> – Disparada ao pressionar uma tecla.
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`function keyPressed() {
+                  <CodeBlock language="javascript" code={`function keyPressed() {
   if (key === 'a') {
     background('aqua');
   }
-}`}
-                  </pre>
+}`} />
                 </li>
 
                 <li className="mt-2">
                   <code>windowResized()</code> – Chamado quando a janela do
                   navegador é redimensionada.
-                  <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                    {`function windowResized() {
+                  <CodeBlock language="javascript" code={`function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-}`}
-                  </pre>
+}`} />
                 </li>
               </ul>
 
@@ -158,8 +147,7 @@ function preload() {
               </ul>
 
               <p className="mt-4 font-semibold">Exemplo com HSB:</p>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 200);
   colorMode(HSB);
   noStroke();
@@ -172,12 +160,10 @@ function preload() {
 
   fill(240, 100, 100);   // azul
   rect(200, 0, 100, 200);
-}`}
-              </pre>
+}`} />
 
               <p className="mt-4 font-semibold">Exemplo com escala de cinza:</p>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 100);
   noStroke();
 
@@ -189,8 +175,7 @@ function preload() {
 
   fill(220);  // cinza claro
   rect(200, 0, 100, 100);
-}`}
-              </pre>
+}`} />
 
               <p className="mt-4">
                 Você pode usar ferramentas como o{" "}
@@ -221,8 +206,7 @@ function preload() {
               </p>
 
               <p className="mt-3 font-semibold">Exemplo simples:</p>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 150);
   noStroke();
 
@@ -236,12 +220,10 @@ function preload() {
   pop();
 
   rect(220, 10, 80, 80); // ainda verde
-}`}
-              </pre>
+}`} />
 
               <p className="mt-4 font-semibold">Exemplo com transformações:</p>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-                {`function draw() {
+              <CodeBlock language="javascript" code={`function draw() {
   background(240);
 
   push();
@@ -253,8 +235,7 @@ function preload() {
 
   fill('blue');
   text("Quadrado rotacionado sem afetar o resto", 10, 140);
-}`}
-              </pre>
+}`} />
 
               <p className="mt-4">
                 Isso mantém seu sketch organizado e evita efeitos colaterais não

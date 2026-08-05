@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { Button } from "../../components";
 import React from "react";
 
@@ -42,8 +43,7 @@ export const ChallengesP5 = () => {
                 {showAnswers[0] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[0] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`let x = 150;
+                <CodeBlock language="javascript" code={`let x = 150;
 let y = 100;
 let radius = 50;
 let c;
@@ -63,8 +63,7 @@ function mousePressed() {
   if (dist(mouseX, mouseY, x, y) < radius) {
     c = color(random(255), random(255), random(255));
   }
-}`}
-                </pre>
+}`} />
               )}
             </div>
           ),
@@ -88,8 +87,7 @@ function mousePressed() {
                 {showAnswers[1] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[1] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`let x = 150;
+                <CodeBlock language="javascript" code={`let x = 150;
 let y = 100;
 
 function setup() {
@@ -103,8 +101,7 @@ function draw() {
   if (keyIsDown(UP_ARROW)) y -= 2;
   if (keyIsDown(DOWN_ARROW)) y += 2;
   rect(x, y, 40, 40);
-}`}
-                </pre>
+}`} />
               )}
             </div>
           ),
@@ -128,8 +125,7 @@ function draw() {
                 {showAnswers[2] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[2] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`function setup() {
+                <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 200);
   background(255);
 }
@@ -144,8 +140,7 @@ function draw() {
     noStroke();
     ellipse(mouseX, mouseY, size, size);
   }
-}`}
-                </pre>
+}`} />
               )}
             </div>
           ),
@@ -169,8 +164,7 @@ function draw() {
                 {showAnswers[3] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[3] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`let x, y, r;
+                <CodeBlock language="javascript" code={`let x, y, r;
 
 function setup() {
   createCanvas(300, 200);
@@ -193,8 +187,7 @@ function novoAlvo() {
   x = random(50, 250);
   y = random(50, 150);
   r = random(20, 40);
-}`}
-                </pre>
+}`} />
               )}
             </div>
           ),
@@ -225,6 +218,7 @@ function novoAlvo() {
         },
       ]}
       goBack={{text: 'Voltar', link: 'programming/sound_and_images'}}
+      goFoward={{text: 'Próximo', link: 'programming/functions_intro'}}
     />
   );
 };

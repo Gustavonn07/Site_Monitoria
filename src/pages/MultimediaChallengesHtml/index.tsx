@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { Button } from "../../components";
 import React from "react";
 
@@ -33,8 +34,7 @@ export const MultimediaChallengesHtml = () => {
                 {showAnswers[0] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[0] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`<form action="/enviar" method="POST">
+                <CodeBlock language="html" code={`<form action="/enviar" method="POST">
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome"><br>
   <label for="email">Email:</label>
@@ -42,8 +42,7 @@ export const MultimediaChallengesHtml = () => {
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" name="mensagem"></textarea><br>
   <button type="submit">Enviar</button>
-</form>`}
-                </pre>
+</form>`} />
               )}
             </div>
           ),
@@ -59,8 +58,7 @@ export const MultimediaChallengesHtml = () => {
                 {showAnswers[1] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[1] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`<header>
+                <CodeBlock language="html" code={`<header>
   <h1>Blog Semântico</h1>
 </header>
 <main>
@@ -73,8 +71,7 @@ export const MultimediaChallengesHtml = () => {
 </main>
 <footer>
   <p>Todos os direitos reservados.</p>
-</footer>`}
-                </pre>
+</footer>`} />
               )}
             </div>
           ),
@@ -90,15 +87,13 @@ export const MultimediaChallengesHtml = () => {
                 {showAnswers[2] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[2] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`<ul>
+                <CodeBlock language="html" code={`<ul>
   <li>Pão</li>
   <li>Leite</li>
   <li>Arroz</li>
   <li>Feijão</li>
   <li>Banana</li>
-</ul>`}
-                </pre>
+</ul>`} />
               )}
             </div>
           ),
@@ -114,12 +109,10 @@ export const MultimediaChallengesHtml = () => {
                 {showAnswers[3] ? "Esconder Resposta" : "Mostrar Resposta"}
               </Button>
               {showAnswers[3] && (
-                <pre className="bg-gray-100 p-3 rounded-md my-4 text-sm overflow-auto">
-{`<figure>
+                <CodeBlock language="html" code={`<figure>
   <img src="https://via.placeholder.com/300x150" alt="Descrição da imagem">
   <figcaption>Paisagem ao entardecer</figcaption>
-</figure>`}
-                </pre>
+</figure>`} />
               )}
             </div>
           ),
@@ -136,6 +129,7 @@ export const MultimediaChallengesHtml = () => {
         },
       ]}
       goBack={{ text: "Voltar", link: "multimedia/semantic_tags" }}
+      goFoward={{ text: "Próximo", link: "multimedia/forms_input" }}
     />
   );
 };

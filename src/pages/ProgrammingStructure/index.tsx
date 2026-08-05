@@ -1,5 +1,6 @@
 import { PageBuilder } from '../../components/containers/PageBuilder'
 import { PageItemsType } from '../../@types'
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingStructure = () => {
   return (
@@ -21,22 +22,19 @@ export const ProgrammingStructure = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
                 <div>
                   <p className="font-semibold mb-2">Exemplo com <code>background()</code>:</p>
-                  <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`function setup() {
+                  <CodeBlock language="javascript" code={`function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
   background(255);
   ellipse(mouseX, mouseY, 50, 50);
-}`}
-                  </pre>
+}`} />
                 </div>
         
                 <div>
                   <p className="font-semibold mb-2">Exemplo com <code>clear()</code>:</p>
-                  <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`function setup() {
+                  <CodeBlock language="javascript" code={`function setup() {
   createCanvas(400, 400);
 }
 
@@ -44,8 +42,7 @@ function draw() {
   clear();
   fill(100, 200, 255);
   ellipse(mouseX, mouseY, 50, 50);
-}`}
-                  </pre>
+}`} />
                 </div>
               </div>
         
@@ -62,16 +59,14 @@ function draw() {
           description: (
             <p>
               Paletas ajudam a manter a estética do sketch consistente. Você pode armazená-las em arrays:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`const paleta = [
+              <CodeBlock language="javascript" code={`const paleta = [
   color(255, 204, 0),
   color(0, 102, 204),
   color(255, 51, 153)
 ];
 
 fill(paleta[1]);
-rect(50, 50, 100, 100);`}
-              </pre>
+rect(50, 50, 100, 100);`} />
               Isso facilita alterações de tema ou aplicação aleatória de cores em elementos.
             </p>
           ),
@@ -88,11 +83,9 @@ rect(50, 50, 100, 100);`}
                 <li><code>textFont(fonte)</code> – aplica uma fonte personalizada.</li>
                 <li><code>textAlign(horiz, vert)</code> – alinha o texto.</li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`textSize(32);
+              <CodeBlock language="javascript" code={`textSize(32);
 textAlign(CENTER, CENTER);
-text("Olá, p5!", width / 2, height / 2);`}
-              </pre>
+text("Olá, p5!", width / 2, height / 2);`} />
               Lembre-se de carregar fontes externas com <code>loadFont()</code> no <code>preload()</code>.
             </p>
           ),
@@ -104,15 +97,13 @@ text("Olá, p5!", width / 2, height / 2);`}
           description: (
             <p>
               As propriedades visuais podem mudar com base em variáveis e interação:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`let tamanho = 50;
+              <CodeBlock language="javascript" code={`let tamanho = 50;
 
 function draw() {
   tamanho = map(mouseX, 0, width, 10, 200);
   fill(100, 200, 255);
   ellipse(width/2, height/2, tamanho, tamanho);
-}`}
-              </pre>
+}`} />
               Isso cria uma experiência responsiva, importante para interações visuais.
             </p>
           ),
@@ -124,12 +115,10 @@ function draw() {
           description: (
             <p>
               Você pode ajustar a velocidade de atualização do sketch com <code>frameRate()</code>:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(400, 400);
   frameRate(30); // 30 FPS
-}`}
-              </pre>
+}`} />
               Use a variável <code>frameCount</code> para criar animações com base no tempo.
             </p>
           ),

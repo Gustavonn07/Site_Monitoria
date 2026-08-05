@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingFundamentals = () => {
   return (
@@ -23,13 +24,11 @@ export const ProgrammingFundamentals = () => {
                 <li><strong>let</strong>: possui escopo de bloco. Ideal para variáveis que podem mudar.</li>
                 <li><strong>const</strong>: também tem escopo de bloco. Use quando o valor não será reatribuído.</li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`var nome = "Lucas";
+              <CodeBlock language="javascript" code={`var nome = "Lucas";
 let idade = 30;
 const ativo = true;
 
-console.log(nome, idade, ativo);`}
-              </pre>
+console.log(nome, idade, ativo);`} />
             </div>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -50,16 +49,14 @@ console.log(nome, idade, ativo);`}
               <p className="mt-3">
                 Saber como combiná-los é essencial para construir expressões e condições mais avançadas.
               </p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`let a = 10;
+              <CodeBlock language="javascript" code={`let a = 10;
 let b = 5;
 
 console.log(a + b);      // 15
 console.log(a > b);      // true
 console.log(a === 10);   // true
 console.log(a !== b);    // true
-console.log(a > 5 && b < 10); // true`}
-              </pre>
+console.log(a > 5 && b < 10); // true`} />
             </div>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -77,8 +74,7 @@ console.log(a > 5 && b < 10); // true`}
                 <li><code>for</code>: laço com controle por contador.</li>
                 <li><code>while</code>: laço que continua enquanto a condição for verdadeira.</li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`let hora = 14;
+              <CodeBlock language="javascript" code={`let hora = 14;
 
 if (hora < 12) {
   console.log("Bom dia");
@@ -90,8 +86,7 @@ if (hora < 12) {
 
 for (let i = 0; i < 3; i++) {
   console.log("Contando:", i);
-}`}
-              </pre>
+}`} />
             </div>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -110,20 +105,16 @@ for (let i = 0; i < 3; i++) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
                 <div>
                   <p className="mt-3 font-semibold">Função tradicional:</p>
-                  <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`function saudacao(nome) {
+                  <CodeBlock language="javascript" code={`function saudacao(nome) {
   return \`Olá, \${nome}\`;
 }
 
-console.log(saudacao("Lucas")); // Olá, Lucas`}
-                  </pre>
+console.log(saudacao("Lucas")); // Olá, Lucas`} />
                 </div>
                 <div>
                   <p className="mt-3 font-semibold">Arrow Function:</p>
-                  <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`const dobro = (x) => x * 2;
-console.log(dobro(4)); // 8`}
-                  </pre>
+                  <CodeBlock language="javascript" code={`const dobro = (x) => x * 2;
+console.log(dobro(4)); // 8`} />
                 </div>
               </div>
             </div>
@@ -145,8 +136,7 @@ console.log(dobro(4)); // 8`}
               <p className="mt-3">
                 Eles são base para trabalhar com dados no dia a dia da programação.
               </p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`const pessoa = {
+              <CodeBlock language="javascript" code={`const pessoa = {
   nome: "Maria",
   idade: 25,
   falar: function () {
@@ -157,8 +147,7 @@ console.log(dobro(4)); // 8`}
 const frutas = ["maçã", "banana", "uva"];
 
 pessoa.falar(); // Oi, sou Maria
-console.log(frutas[1]); // banana`}
-              </pre>
+console.log(frutas[1]); // banana`} />
             </div>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -175,23 +164,19 @@ console.log(frutas[1]); // banana`}
                 <li><code>var</code> é içado e pode causar comportamentos inesperados.</li>
                 <li><code>let</code> e <code>const</code> respeitam o bloco onde foram declaradas e não são acessadas antes da declaração.</li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`function exemplo() {
+              <CodeBlock language="javascript" code={`function exemplo() {
   console.log(x); // undefined
   var x = 10;
 }
-exemplo();`}
-              </pre>
+exemplo();`} />
               <p className="mt-4">
                 <code>let</code> e <code>const</code> não sofrem hoisting da mesma forma:
               </p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`if (true) {
+              <CodeBlock language="javascript" code={`if (true) {
   let local = "bloco";
   console.log(local); // bloco
 }
-// console.log(local); // Erro`}
-              </pre>
+// console.log(local); // Erro`} />
             </div>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -211,18 +196,14 @@ exemplo();`}
               <p className="mt-3">
                 Isso melhora a organização do código e facilita a manutenção de projetos maiores.
               </p>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`// soma.js
+              <CodeBlock language="javascript" code={`// soma.js
 export function soma(a, b) {
   return a + b;
-}`}
-              </pre>
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-{`// main.js
+}`} />
+              <CodeBlock language="javascript" code={`// main.js
 import { soma } from './soma.js';
 
-console.log(soma(2, 3)); // 5`}
-              </pre>
+console.log(soma(2, 3)); // 5`} />
               <p className="mt-4">
                 Para funcionar no navegador, use a tag <code>{`<script type="module">`}</code> no seu index.html
               </p>

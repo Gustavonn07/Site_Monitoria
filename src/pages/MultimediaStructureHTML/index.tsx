@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const HTMLStructurePage = () => {
@@ -20,8 +21,7 @@ export const HTMLStructurePage = () => {
               navegador. A estrutura mais básica contém as seguintes tags:{" "}
               <code>!DOCTYPE html</code>,<code>html</code>, <code>head</code> e{" "}
               <code>body</code>.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<!DOCTYPE html>
+              <CodeBlock language="html" code={`<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -30,8 +30,7 @@ export const HTMLStructurePage = () => {
   <body>
     <h1>Conteúdo principal</h1>
   </body>
-</html>`}
-              </pre>
+</html>`} />
               Essa estrutura é essencial para garantir que o navegador
               interprete a página corretamente.
             </p>
@@ -47,9 +46,7 @@ export const HTMLStructurePage = () => {
               informa ao navegador que o documento está usando a versão HTML5.
               Sem ela, o navegador pode entrar em modo "quirks" e interpretar o
               código de forma inconsistente.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<!DOCTYPE html>`}
-              </pre>
+              <CodeBlock language="html" code={`<!DOCTYPE html>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -63,11 +60,9 @@ export const HTMLStructurePage = () => {
               de qualquer documento HTML. Pode receber atributos como{" "}
               <code>lang</code>, que define o idioma principal do conteúdo (por
               exemplo, <code>lang="pt-BR"</code>).
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<html lang="pt-BR">
+              <CodeBlock language="html" code={`<html lang="pt-BR">
   ...
-</html>`}
-              </pre>
+</html>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -81,14 +76,12 @@ export const HTMLStructurePage = () => {
               codificação, links para arquivos externos (CSS, fontes, favicon) e
               outras configurações. Esses dados não são exibidos diretamente na
               interface do usuário.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<head>
+              <CodeBlock language="html" code={`<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minha Página</title>
   <link rel="stylesheet" href="estilo.css" />
-</head>`}
-              </pre>
+</head>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: false },
@@ -107,13 +100,9 @@ export const HTMLStructurePage = () => {
               <br />
               <br />
               <strong>Exemplo de &lt;a&gt;:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-                {`<a href="https://exemplo.com">Ir para o site</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="https://exemplo.com">Ir para o site</a>`} />
               <strong>Exemplo de &lt;link&gt;:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-                {`<link rel="stylesheet" href="estilos.css">`}
-              </pre>
+              <CodeBlock language="html" code={`<link rel="stylesheet" href="estilos.css">`} />
             </p>
           ),
         },
@@ -128,11 +117,9 @@ export const HTMLStructurePage = () => {
               <br />
               <br />
               <strong>Exemplo:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<meta charset="UTF-8" />
+              <CodeBlock language="html" code={`<meta charset="UTF-8" />
 <meta name="description" content="Descrição da página" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />`}
-              </pre>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />`} />
               Esses dados ajudam os mecanismos de busca, melhoram a
               acessibilidade e a compatibilidade com dispositivos móveis.
             </p>
@@ -148,9 +135,7 @@ export const HTMLStructurePage = () => {
               importante para o SEO. O conteúdo dessa tag aparece na aba do
               navegador e também como o título exibido nos resultados de
               pesquisa.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<title>Minha Página</title>`}
-              </pre>
+              <CodeBlock language="html" code={`<title>Minha Página</title>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -163,12 +148,10 @@ export const HTMLStructurePage = () => {
               O <code>body</code> representa o corpo visível da página, ou seja,
               todo o conteúdo que será mostrado para o usuário, como textos,
               imagens, links, seções, botões, etc.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<body>
+              <CodeBlock language="html" code={`<body>
   <h1>Bem-vindo!</h1>
   <p>Este é o conteúdo principal da página.</p>
-</body>`}
-              </pre>
+</body>`} />
               É dentro do <code>body</code> que você constrói a interface da sua
               página web.
             </p>

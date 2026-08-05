@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const SemanticTags = () => {
@@ -45,8 +46,7 @@ export const SemanticTags = () => {
                 <li><code>&lt;abbr&gt;</code>: Abreviações com significado completo (útil com o atributo <code>title</code>).</li>
               </ul>
         
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto mb-5">
-        {`<header>
+              <CodeBlock language="html" code={`<header>
   <h1>Meu Site</h1>
   <nav>
     <a href="/">Início</a>
@@ -66,11 +66,9 @@ export const SemanticTags = () => {
 
 <footer>
   <p>&copy; 2025 Meu Site</p>
-</footer>`}
-              </pre>
+</footer>`} />
         
-              <pre className="bg-gray-100 p-2 rounded-md text-sm overflow-auto">
-        {`<aside>
+              <CodeBlock language="html" code={`<aside>
   <h2>Dica do Dia</h2>
   <p>Use <code>&lt;section&gt;</code> para dividir bem os blocos de conteúdo.</p>
 </aside>
@@ -87,8 +85,7 @@ export const SemanticTags = () => {
 <details>
   <summary>Mais informações</summary>
   <p>Esses detalhes ficam escondidos até o usuário clicar.</p>
-</details>`}
-              </pre>
+</details>`} />
             </>
           ),
           sectionProps: { hasSeparatorSection: false },

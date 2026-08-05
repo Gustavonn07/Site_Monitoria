@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FunctionsParams = () => {
   return (
@@ -17,14 +18,12 @@ export const FunctionsParams = () => {
             <p>
               <strong>Parâmetros</strong> permitem que funções recebam valores
               externos, tornando-as mais flexíveis:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function saudar(nome) {
+              <CodeBlock language="javascript" code={`function saudar(nome) {
   console.log("Olá, " + nome + "!");
 }
 
 saudar("Ana"); // saída: Olá, Ana!
-saudar("Carlos"); // saída: Olá, Carlos!`}
-              </pre>
+saudar("Carlos"); // saída: Olá, Carlos!`} />
               Neste exemplo, o parâmetro <code>nome</code> é substituído pelos
               valores passados ao chamar a função.
             </p>
@@ -37,14 +36,12 @@ saudar("Carlos"); // saída: Olá, Carlos!`}
           description: (
             <p>
               Uma função pode receber vários parâmetros:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function soma(a, b) {
+              <CodeBlock language="javascript" code={`function soma(a, b) {
   console.log(a + b);
 }
 
 soma(3, 4); // saída: 7
-soma(10, 5); // saída: 15`}
-              </pre>
+soma(10, 5); // saída: 15`} />
               Aqui, <code>a</code> e <code>b</code> são somados e exibidos no
               console.
             </p>
@@ -58,14 +55,12 @@ soma(10, 5); // saída: 15`}
             <p>
               Usamos a palavra-chave <code>return</code> para devolver valores
               de uma função:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function soma(a, b) {
+              <CodeBlock language="javascript" code={`function soma(a, b) {
   return a + b;
 }
 
 const resultado = soma(5, 7);
-console.log(resultado); // saída: 12`}
-              </pre>
+console.log(resultado); // saída: 12`} />
               O valor retornado pode ser armazenado em uma variável ou usado em
               outra expressão.
             </p>
@@ -79,11 +74,9 @@ console.log(resultado); // saída: 12`}
             <p>
               Arrow functions permitem um retorno direto quando o corpo é uma
               única expressão:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`const multiplicar = (x, y) => x * y;
+              <CodeBlock language="javascript" code={`const multiplicar = (x, y) => x * y;
 
-console.log(multiplicar(3, 4)); // saída: 12`}
-              </pre>
+console.log(multiplicar(3, 4)); // saída: 12`} />
               Nesse caso, não precisamos escrever <code>return</code>.
             </p>
           ),

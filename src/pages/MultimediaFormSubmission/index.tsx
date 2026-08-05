@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsSubmissionPage = () => {
   return (
@@ -37,13 +38,11 @@ export const FormsSubmissionPage = () => {
               <p className="mb-2">
                 O método <code>GET</code> envia os dados na URL. Útil para consultas sem informações sensíveis.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form action="/buscar" method="get">
+              <CodeBlock language="html" code={`<form action="/buscar" method="get">
   <label>Pesquisar:</label>
   <input type="text" name="q">
   <input type="submit" value="Buscar">
-</form>`}
-              </pre>
+</form>`} />
             </>
           ),
         },
@@ -56,8 +55,7 @@ export const FormsSubmissionPage = () => {
               <p className="mb-2">
                 O método <code>POST</code> envia os dados no corpo da requisição. Mais seguro para informações sensíveis.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form action="/cadastrar" method="post">
+              <CodeBlock language="html" code={`<form action="/cadastrar" method="post">
   <label>Nome:</label>
   <input type="text" name="nome" required>
   
@@ -65,8 +63,7 @@ export const FormsSubmissionPage = () => {
   <input type="email" name="email" required>
   
   <input type="submit" value="Cadastrar">
-</form>`}
-              </pre>
+</form>`} />
             </>
           ),
         },
@@ -79,14 +76,12 @@ export const FormsSubmissionPage = () => {
               <p className="mb-2">
                 Para enviar arquivos, o formulário precisa do atributo <code>enctype="multipart/form-data"</code>.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form action="/upload" method="post" enctype="multipart/form-data">
+              <CodeBlock language="html" code={`<form action="/upload" method="post" enctype="multipart/form-data">
   <label>Selecione um arquivo:</label>
   <input type="file" name="documento">
   
   <input type="submit" value="Enviar arquivo">
-</form>`}
-              </pre>
+</form>`} />
             </>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -117,7 +112,7 @@ export const FormsSubmissionPage = () => {
       }}
       goFoward={{
         text: "Próximo",
-        link: "",
+        link: "multimedia/css_introduction",
       }}
     />
   );

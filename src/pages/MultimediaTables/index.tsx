@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const MultimediaTables = () => {
@@ -50,8 +51,7 @@ export const MultimediaTables = () => {
                 </li>
               </ul>
               <strong>Exemplo:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<table>
+              <CodeBlock language="html" code={`<table>
   <tr>
     <th>Nome</th>
     <th>Idade</th>
@@ -64,8 +64,7 @@ export const MultimediaTables = () => {
     <td>Ana</td>
     <td>30</td>
   </tr>
-</table>`}
-              </pre>
+</table>`} />
               <table className="border border-gray-400 text-sm">
                 <thead>
                   <tr>
@@ -111,8 +110,7 @@ export const MultimediaTables = () => {
                   ou observações.
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<table>
+              <CodeBlock language="html" code={`<table>
   <thead>
     <tr>
       <th>Produto</th>
@@ -135,8 +133,7 @@ export const MultimediaTables = () => {
       <td>R$ 17,00</td>
     </tr>
   </tfoot>
-</table>`}
-              </pre>
+</table>`} />
               <table className="border border-gray-400 text-sm">
                 <thead>
                   <tr>
@@ -187,8 +184,7 @@ export const MultimediaTables = () => {
             <p>
               O atributo <code>colspan</code> permite que uma célula ocupe
               várias colunas.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<table>
+              <CodeBlock language="html" code={`<table>
   <tr>
     <th colspan="2">Informações</th>
   </tr>
@@ -196,8 +192,7 @@ export const MultimediaTables = () => {
     <td>Nome</td>
     <td>João</td>
   </tr>
-</table>`}
-              </pre>
+</table>`} />
               <table className="border border-gray-400 text-sm">
                 <thead>
                   <tr>
@@ -224,8 +219,7 @@ export const MultimediaTables = () => {
             <p>
               Já o atributo <code>rowspan</code> permite que uma célula ocupe
               várias linhas.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<table>
+              <CodeBlock language="html" code={`<table>
   <tr>
     <th>Nome</th>
     <th>Telefone</th>
@@ -237,8 +231,7 @@ export const MultimediaTables = () => {
   <tr>
     <td>8765-4321</td>
   </tr>
-</table>`}
-              </pre>
+</table>`} />
               <table className="border border-gray-400 text-sm">
                 <thead>
                   <tr>

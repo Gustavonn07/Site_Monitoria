@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ConstructorFunctionsPage = () => {
   return (
@@ -26,8 +27,7 @@ export const ConstructorFunctionsPage = () => {
           type: PageItemsType.SECTION,
           title: "Sintaxe básica",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function Pessoa(nome, idade) {
+            <CodeBlock language="javascript" code={`function Pessoa(nome, idade) {
   this.nome = nome;
   this.idade = idade;
   this.apresentar = function() {
@@ -36,8 +36,7 @@ export const ConstructorFunctionsPage = () => {
 }
 
 const pessoa1 = new Pessoa("Ana", 25);
-pessoa1.apresentar(); // Olá, meu nome é Ana e tenho 25 anos.`}
-            </pre>
+pessoa1.apresentar(); // Olá, meu nome é Ana e tenho 25 anos.`} />
           ),
         },
         {
@@ -47,8 +46,7 @@ pessoa1.apresentar(); // Olá, meu nome é Ana e tenho 25 anos.`}
             <p>
               Para métodos compartilhados entre todas as instâncias, usamos o{" "}
               <code>prototype</code>:
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function Pessoa(nome, idade) {
+              <CodeBlock language="javascript" code={`function Pessoa(nome, idade) {
   this.nome = nome;
   this.idade = idade;
 }
@@ -62,8 +60,7 @@ const pessoa1 = new Pessoa("Ana", 25);
 const pessoa2 = new Pessoa("João", 30);
 
 pessoa1.apresentar(); // Olá, meu nome é Ana e tenho 25 anos.
-pessoa2.apresentar(); // Olá, meu nome é João e tenho 30 anos.`}
-              </pre>
+pessoa2.apresentar(); // Olá, meu nome é João e tenho 30 anos.`} />
               Dessa forma, todas as instâncias compartilham o mesmo método, economizando memória.
             </p>
           ),

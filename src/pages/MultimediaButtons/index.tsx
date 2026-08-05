@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsButtonsPage = () => {
     return (
@@ -20,11 +21,9 @@ export const FormsButtonsPage = () => {
                             </p>
 
                             {/* Código */}
-                            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-                                {`<input type="submit" value="Enviar">
+                            <CodeBlock language="html" code={`<input type="submit" value="Enviar">
 <input type="reset" value="Limpar">
-<input type="button" value="Clique aqui">`}
-                            </pre>
+<input type="button" value="Clique aqui">`} />
 
                             {/* Explicação de cada tipo */}
                             <ul className="list-disc ml-6 mb-4">
@@ -74,11 +73,9 @@ export const FormsButtonsPage = () => {
                             </p>
 
                             {/* Código */}
-                            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-                                {`<button type="submit">Enviar</button>
+                            <CodeBlock language="html" code={`<button type="submit">Enviar</button>
 <button type="reset">Limpar</button>
-<button type="button" onclick="alert('Clicou!')">Clique aqui</button>`}
-                            </pre>
+<button type="button" onclick="alert('Clicou!')">Clique aqui</button>`} />
 
                             {/* Exemplo renderizado */}
                             <div className="mt-4 flex gap-2">

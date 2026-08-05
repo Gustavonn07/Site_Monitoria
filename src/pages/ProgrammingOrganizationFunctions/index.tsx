@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingFunctions = () => {
   return (
@@ -33,8 +34,7 @@ export const ProgrammingFunctions = () => {
           description: (
             <p>
               Você pode criar funções para qualquer tarefa repetitiva:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function desenharAlvo(x, y) {
+              <CodeBlock language="javascript" code={`function desenharAlvo(x, y) {
   fill("red");
   ellipse(x, y, 50);
   fill("white");
@@ -45,8 +45,7 @@ function draw() {
   background(220);
   desenharAlvo(100, 100);
   desenharAlvo(200, 150);
-}`}
-              </pre>
+}`} />
               Isso deixa o código mais limpo e flexível.
             </p>
           ),
@@ -84,10 +83,8 @@ function draw() {
                 </li>
               </ul>
               No HTML:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<script src="utils.js"></script>
-<script src="main.js"></script>`}
-              </pre>
+              <CodeBlock language="javascript" code={`<script src="utils.js"></script>
+<script src="main.js"></script>`} />
               Isso exige que os arquivos estejam na mesma pasta (ou bem
               referenciados).
             </p>

@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsSelectOptionPage = () => {
   return (
@@ -21,16 +22,14 @@ export const FormsSelectOptionPage = () => {
               </p>
 
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form>
+              <CodeBlock language="html" code={`<form>
   <label for="cidade">Cidade:</label>
   <select id="cidade" name="cidade">
     <option value="sp">São Paulo</option>
     <option value="rj">Rio de Janeiro</option>
     <option value="bh">Belo Horizonte</option>
   </select>
-</form>`}
-              </pre>
+</form>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">
@@ -109,14 +108,12 @@ export const FormsSelectOptionPage = () => {
           description: (
             <>
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label for="curso">Curso:</label>
+              <CodeBlock language="html" code={`<label for="curso">Curso:</label>
 <select id="curso" name="curso">
   <option value="html">HTML</option>
   <option value="css" selected>CSS</option>
   <option value="js">JavaScript</option>
-</select>`}
-              </pre>
+</select>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">
@@ -148,15 +145,13 @@ export const FormsSelectOptionPage = () => {
               </p>
 
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label for="linguagens">Escolha linguagens:</label>
+              <CodeBlock language="html" code={`<label for="linguagens">Escolha linguagens:</label>
 <select id="linguagens" name="linguagens" multiple size="4">
   <option value="js">JavaScript</option>
   <option value="py">Python</option>
   <option value="java">Java</option>
   <option value="csharp">C#</option>
-</select>`}
-              </pre>
+</select>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">
@@ -190,8 +185,7 @@ export const FormsSelectOptionPage = () => {
               </p>
 
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label for="carros">Carro:</label>
+              <CodeBlock language="html" code={`<label for="carros">Carro:</label>
 <select id="carros" name="carros">
   <optgroup label="Esportivos">
     <option value="ferrari">Ferrari</option>
@@ -201,8 +195,7 @@ export const FormsSelectOptionPage = () => {
     <option value="jeep">Jeep</option>
     <option value="volvo">Volvo</option>
   </optgroup>
-</select>`}
-              </pre>
+</select>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">

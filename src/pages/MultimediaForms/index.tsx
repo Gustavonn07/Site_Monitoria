@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const MultimediaForms = () => {
@@ -34,13 +35,11 @@ export const MultimediaForms = () => {
                 atributos <code>action</code> (para onde os dados serão
                 enviados) e <code>method</code> (o tipo de requisição HTTP).
               </p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<form action="/enviar" method="POST">
+              <CodeBlock language="html" code={`<form action="/enviar" method="POST">
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
   <button type="submit">Enviar</button>
-</form>`}
-              </pre>
+</form>`} />
               <form className="border p-4 space-y-2">
                 <label htmlFor="nome">Nome:</label>
                 <input
@@ -81,12 +80,10 @@ export const MultimediaForms = () => {
           description: (
             <>
               <p>Campos com entrada de dados diretos:</p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<input type="text" name="nome">
+              <CodeBlock language="html" code={`<input type="text" name="nome">
 <input type="email" name="email">
 <input type="password" name="senha">
-<input type="number" name="idade">`}
-              </pre>
+<input type="number" name="idade">`} />
               <form className="border p-4 grid grid-cols-1 gap-3">
                 <input
                   type="text"
@@ -134,13 +131,11 @@ export const MultimediaForms = () => {
                   escolher apenas uma entre várias alternativas.
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<input type="checkbox" name="interesses" value="html"> HTML
+              <CodeBlock language="html" code={`<input type="checkbox" name="interesses" value="html"> HTML
 <input type="checkbox" name="interesses" value="css"> CSS
         
 <input type="radio" name="sexo" value="masc"> Masculino
-<input type="radio" name="sexo" value="fem"> Feminino`}
-              </pre>
+<input type="radio" name="sexo" value="fem"> Feminino`} />
               <form className="border p-4 space-y-4">
                 <div>
                   <p className="font-semibold">
@@ -197,12 +192,10 @@ export const MultimediaForms = () => {
           description: (
             <>
               <p>Campos especiais:</p>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`<input type="file" name="arquivo">
+              <CodeBlock language="html" code={`<input type="file" name="arquivo">
 <input type="date" name="nascimento">
 <input type="color" name="cor">
-<input type="range" name="volume">`}
-              </pre>
+<input type="range" name="volume">`} />
               <form className="border p-4 grid grid-cols-1 gap-3">
                 <input type="file" />
                 <input type="date" />
@@ -239,8 +232,7 @@ export const MultimediaForms = () => {
                 </li>
               </ul>
         
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-        {`<form>
+              <CodeBlock language="html" code={`<form>
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" name="mensagem"></textarea>
 
@@ -255,8 +247,7 @@ export const MultimediaForms = () => {
     <input type="radio" name="sexo" value="masc"> Masculino
     <input type="radio" name="sexo" value="fem"> Feminino
   </fieldset>
-</form>`}
-              </pre>
+</form>`} />
         
               <form className="border p-4 space-y-3">
                 <div>

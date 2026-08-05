@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsValidationPage = () => {
   return (
@@ -43,8 +44,7 @@ export const FormsValidationPage = () => {
               <p className="mb-2">
                 Nesse exemplo, o nome é obrigatório e o email deve seguir o padrão de email.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form>
+              <CodeBlock language="html" code={`<form>
   <label>Nome:</label>
   <input type="text" name="nome" required>
   
@@ -52,8 +52,7 @@ export const FormsValidationPage = () => {
   <input type="email" name="email" pattern=".+@.+\\..+" required>
   
   <input type="submit" value="Enviar">
-</form>`}
-              </pre>
+</form>`} />
             </>
           ),
         },
@@ -66,10 +65,8 @@ export const FormsValidationPage = () => {
               <p className="mb-2">
                 Define limites de caracteres que o usuário pode inserir.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Senha:</label>
-<input type="password" name="senha" minlength="6" maxlength="12" required>`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Senha:</label>
+<input type="password" name="senha" minlength="6" maxlength="12" required>`} />
             </>
           ),
         },
@@ -82,10 +79,8 @@ export const FormsValidationPage = () => {
               <p className="mb-2">
                 Limita valores numéricos para idade ou quantidade.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Idade:</label>
-<input type="number" name="idade" min="18" max="99" required>`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Idade:</label>
+<input type="number" name="idade" min="18" max="99" required>`} />
             </>
           ),
         },
@@ -98,10 +93,8 @@ export const FormsValidationPage = () => {
               <p className="mb-2">
                 Input do tipo URL verifica se o valor inserido é um link válido.
               </p>
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label>Site pessoal:</label>
-<input type="url" name="site" placeholder="https://exemplo.com">`}
-              </pre>
+              <CodeBlock language="html" code={`<label>Site pessoal:</label>
+<input type="url" name="site" placeholder="https://exemplo.com">`} />
             </>
           ),
           sectionProps: { hasSeparatorSection: true },

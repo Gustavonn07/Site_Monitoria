@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const MultimediaImages = () => {
@@ -17,9 +18,7 @@ export const MultimediaImages = () => {
             <p>
               A tag <code>&lt;img&gt;</code> é usada para incorporar imagens em uma página web.
               Ela é uma tag auto-fechável e exige, no mínimo, os atributos <code>src</code> (fonte da imagem) e <code>alt</code> (texto alternativo).
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<img src="imagem.jpg" alt="Descrição da imagem" />`}
-              </pre>
+              <CodeBlock language="html" code={`<img src="imagem.jpg" alt="Descrição da imagem" />`} />
               O atributo <code>src</code> indica o caminho da imagem, enquanto <code>alt</code> descreve a imagem para leitores de tela e usuários que não podem vê-la.
             </p>
           ),
@@ -44,13 +43,11 @@ export const MultimediaImages = () => {
           description: (
             <p>
               Você pode usar caminhos relativos ou absolutos no atributo <code>src</code>:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<!-- Caminho relativo -->
+              <CodeBlock language="html" code={`<!-- Caminho relativo -->
 <img src="imagens/foto.jpg" alt="Foto da paisagem" />
 
 <!-- Caminho absoluto -->
-<img src="https://exemplo.com/foto.jpg" alt="Foto externa" />`}
-              </pre>
+<img src="https://exemplo.com/foto.jpg" alt="Foto externa" />`} />
               Certifique-se de que o caminho está correto para evitar imagens quebradas.
             </p>
           ),
@@ -64,14 +61,12 @@ export const MultimediaImages = () => {
               Para garantir que a imagem se ajuste a diferentes tamanhos de tela, utilize atributos como <code>width</code>, <code>height</code> ou estilize com CSS.
               <br /><br />
               Também é comum usar a propriedade <code>max-width: 100%</code> em CSS para que a imagem não ultrapasse os limites do contêiner.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<style>
+              <CodeBlock language="html" code={`<style>
   img {
     max-width: 100%;
     height: auto;
   }
-</style>`}
-              </pre>
+</style>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
