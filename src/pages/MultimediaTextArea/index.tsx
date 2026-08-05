@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FormsTextareaPage = () => {
   return (
@@ -20,12 +21,10 @@ export const FormsTextareaPage = () => {
               </p>
 
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<form>
+              <CodeBlock language="html" code={`<form>
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem..."></textarea>
-</form>`}
-              </pre>
+</form>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">
@@ -73,10 +72,8 @@ export const FormsTextareaPage = () => {
           description: (
             <>
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label for="comentario">Comentário:</label>
-<textarea id="comentario" name="comentario" rows="3">Texto inicial aqui...</textarea>`}
-              </pre>
+              <CodeBlock language="html" code={`<label for="comentario">Comentário:</label>
+<textarea id="comentario" name="comentario" rows="3">Texto inicial aqui...</textarea>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">
@@ -101,10 +98,8 @@ export const FormsTextareaPage = () => {
           description: (
             <>
               {/* Código */}
-              <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`<label for="info">Informações:</label>
-<textarea id="info" name="info" rows="3" readonly>Este campo não pode ser editado.</textarea>`}
-              </pre>
+              <CodeBlock language="html" code={`<label for="info">Informações:</label>
+<textarea id="info" name="info" rows="3" readonly>Este campo não pode ser editado.</textarea>`} />
 
               {/* Exemplo renderizado */}
               <div className="mt-4 p-4 border rounded-md">

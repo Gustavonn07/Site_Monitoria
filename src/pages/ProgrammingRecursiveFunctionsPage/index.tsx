@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const RecursiveFunctionsPage = () => {
   return (
@@ -26,30 +27,26 @@ export const RecursiveFunctionsPage = () => {
           type: PageItemsType.SECTION,
           title: "Exemplo básico: contagem regressiva",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function contagemRegressiva(n) {
+            <CodeBlock language="javascript" code={`function contagemRegressiva(n) {
   if (n <= 0) return;
   console.log(n);
   contagemRegressiva(n - 1);
 }
 
 contagemRegressiva(5);
-// Saída: 5 4 3 2 1`}
-            </pre>
+// Saída: 5 4 3 2 1`} />
           ),
         },
         {
           type: PageItemsType.SECTION,
           title: "Exemplo clássico: Fatorial",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function fatorial(n) {
+            <CodeBlock language="javascript" code={`function fatorial(n) {
   if (n <= 1) return 1;
   return n * fatorial(n - 1);
 }
 
-console.log(fatorial(5)); // Saída: 120`}
-            </pre>
+console.log(fatorial(5)); // Saída: 120`} />
           ),
           sectionProps: {
             hasSeparatorSection: true,
@@ -97,7 +94,7 @@ console.log(fatorial(5)); // Saída: 120`}
       }}
       goFoward={{
         text: "Próximo",
-        link: "",
+        link: "programming/arrays",
       }}
     />
   );

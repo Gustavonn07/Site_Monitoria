@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingSound = () => {
   return (
@@ -17,8 +18,7 @@ export const ProgrammingSound = () => {
             <p>
               Use a função <code>loadImage()</code> para carregar imagens no
               p5.js. A função deve ser chamada dentro de <code>preload()</code>.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`let img;
+              <CodeBlock language="javascript" code={`let img;
 
 function preload() {
   img = loadImage("imagem.png");
@@ -31,8 +31,7 @@ function setup() {
 function draw() {
   background(220);
   image(img, 50, 50, 200, 150); // x, y, largura, altura
-}`}
-              </pre>
+}`} />
               Certifique-se de que a imagem esteja na mesma pasta do arquivo
               HTML ou bem referenciada.
             </p>
@@ -46,15 +45,13 @@ function draw() {
             <p>
               Você pode aplicar efeitos com filtros ou alterar transparência com
               <code>tint()</code>.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function draw() {
+              <CodeBlock language="javascript" code={`function draw() {
   background(255);
   tint(255, 100); // transparência
   image(img, 0, 0);
   
   filter(GRAY); // aplica filtro em tons de cinza
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -66,15 +63,13 @@ function draw() {
             <p>
               Para adicionar áudio, use <code>loadSound()</code>. É necessário
               importar a biblioteca de som do p5.
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                <div>
-                  Adicione no HTML:{" "}
-                  <code className="">{`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>`}</code>
-                </div>
-              </pre>
+              Adicione no HTML:
+              <CodeBlock
+                language="html"
+                code={`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>`}
+              />
               Exemplo:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`let som;
+              <CodeBlock language="javascript" code={`let som;
 
 function preload() {
   som = loadSound("som.mp3");
@@ -84,8 +79,7 @@ function setup() {
   createCanvas(200, 200);
   let botao = createButton("Tocar Som");
   botao.mousePressed(() => som.play());
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: false },

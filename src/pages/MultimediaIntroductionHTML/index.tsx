@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const IntroductionHTML5 = () => {
@@ -66,8 +67,7 @@ export const IntroductionHTML5 = () => {
               Um arquivo HTML segue uma estrutura base com elementos como {" "}
               <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e {" "}
               <code>&lt;body&gt;</code>.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<!DOCTYPE html>
+              <CodeBlock language="html" code={`<!DOCTYPE html>
 <html>
   <head>
     <title>Minha Página</title>
@@ -75,8 +75,7 @@ export const IntroductionHTML5 = () => {
   <body>
     <h1>Olá, mundo!</h1>
   </body>
-</html>`}
-              </pre>
+</html>`} />
               Cada uma dessas partes tem um papel fundamental: <code>&lt;head&gt;</code> guarda metadados e referências a scripts e estilos, enquanto <code>&lt;body&gt;</code> contém todo o conteúdo visível da página.
             </p>
           ),
@@ -102,14 +101,12 @@ export const IntroductionHTML5 = () => {
                   <code>&lt;footer&gt;</code> – rodapé
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<main>
+              <CodeBlock language="html" code={`<main>
   <section>
     <h2>Seção Principal</h2>
     <p>Texto aqui...</p>
   </section>
-</main>`}
-              </pre>
+</main>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: false },
@@ -131,11 +128,9 @@ export const IntroductionHTML5 = () => {
             <p>
               Use tags como <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code> {" "}
               para agrupar conteúdos e aplicar estilos:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<div class="container">
+              <CodeBlock language="html" code={`<div class="container">
   <span class="highlight">Texto importante</span>
-</div>`}
-              </pre>
+</div>`} />
               Essas tags não têm significado semântico, mas são muito úteis para
               estrutura e CSS.
             </p>

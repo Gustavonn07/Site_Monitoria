@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const HTMLTagsPage = () => {
@@ -17,12 +18,10 @@ export const HTMLTagsPage = () => {
             <p>
               As tags <code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code> representam títulos com diferentes níveis de importância semântica. <br /><br />
               A tag <code>&lt;p&gt;</code> é usada para criar parágrafos de texto corrido.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<h1>Título Principal</h1>
+              <CodeBlock language="html" code={`<h1>Título Principal</h1>
 <h2>Subtítulo</h2>
 <h3>Seção Interna</h3>
-<p>Este é um parágrafo explicando o conteúdo da seção.</p>`}
-              </pre>
+<p>Este é um parágrafo explicando o conteúdo da seção.</p>`} />
               Essas tags ajudam a estruturar o conteúdo de maneira clara e semântica.
             </p>
           ),
@@ -46,37 +45,30 @@ export const HTMLTagsPage = () => {
               Existem três tipos principais de listas em HTML, cada uma com uma finalidade diferente:
               <br /><br />
               <strong>1. Lista Não Ordenada (<code>&lt;ul&gt;</code>):</strong><br /> usada quando a ordem dos itens não importa. Ideal para listas de compras, recursos, tópicos soltos etc.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<ul>
+              <CodeBlock language="html" code={`<ul>
   <li>Maçã</li>
   <li>Banana</li>
   <li>Laranja</li>
-</ul>`}
-              </pre>
+</ul>`} />
               <strong>2. Lista Ordenada (<code>&lt;ol&gt;</code>):</strong><br /> usada quando a ordem dos itens faz diferença. É útil para passo a passo, tutoriais ou sequências.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<ol>
+              <CodeBlock language="html" code={`<ol>
   <li>Pré-aqueça o forno</li>
   <li>Misture os ingredientes</li>
   <li>Asse por 40 minutos</li>
-</ol>`}
-              </pre>
+</ol>`} />
               <strong>3. Lista de Definição (<code>&lt;dl&gt;</code>):</strong><br /> usada para apresentar termos e suas definições, como em glossários. Contém:
               <br />
               <code>&lt;dt&gt;</code> (Definition Term) para o termo definido;
               <br />
               <code>&lt;dd&gt;</code> (Definition Description) para a descrição daquele termo.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<dl>
+              <CodeBlock language="html" code={`<dl>
   <dt>HTML</dt>
   <dd>Linguagem de marcação para estruturar páginas web.</dd>
   <dt>CSS</dt>
   <dd>Folhas de estilo para definir aparência visual.</dd>
-</dl>`}
-              </pre>
+</dl>`} />
               <strong>Exemplo com listas aninhadas:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<ol>
+              <CodeBlock language="html" code={`<ol>
   <li>Comprar ingredientes</li>
   <li>Preparar:
     <ul>
@@ -85,8 +77,7 @@ export const HTMLTagsPage = () => {
     </ul>
   </li>
   <li>Cozinhar</li>
-</ol>`}
-              </pre>
+</ol>`} />
               As listas ajudam a organizar melhor a informação e a estruturar o conteúdo de forma clara e legível.
             </p>
           ),
@@ -100,23 +91,17 @@ export const HTMLTagsPage = () => {
               O HTML permite incorporar diversos tipos de mídia, como imagens, vídeos e áudios para enriquecer a experiência do usuário.
               <br /><br />
               <strong>Imagem (<code>&lt;img&gt;</code>):</strong><br /> A tag <code>&lt;img&gt;</code> serve para exibir imagens em uma página. O atributo <code>alt</code> é essencial para acessibilidade e para casos em que a imagem não pode ser carregada.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<img src="logo.png" alt="Logo da empresa" width="200" />`}
-              </pre>
+              <CodeBlock language="html" code={`<img src="logo.png" alt="Logo da empresa" width="200" />`} />
               <strong>Vídeo (<code>&lt;video&gt;</code>):</strong><br /> A tag <code>&lt;video&gt;</code> permite incorporar vídeos. Se o vídeo não estiver disponível ou o navegador não for compatível, o conteúdo alternativo dentro da tag será exibido.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<video controls width="320">
+              <CodeBlock language="html" code={`<video controls width="320">
   <source src="apresentacao.mp4" type="video/mp4" />
   Seu navegador não suporta vídeo ou o arquivo não foi encontrado.
-</video>`}
-              </pre>
+</video>`} />
               <strong>Áudio (<code>&lt;audio&gt;</code>):</strong><br /> A tag <code>&lt;audio&gt;</code> permite incorporar sons, como música ou narração.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<audio controls>
+              <CodeBlock language="html" code={`<audio controls>
   <source src="audio.mp3" type="audio/mpeg" />
   Seu navegador não suporta áudio.
-</audio>`}
-              </pre>
+</audio>`} />
               Sempre ofereça conteúdo alternativo e use os atributos corretamente para garantir acessibilidade e compatibilidade entre navegadores.
             </p>
           ),
@@ -134,12 +119,10 @@ export const HTMLTagsPage = () => {
               <strong><code>&lt;details&gt;</code>:</strong> envolve o conteúdo que será mostrado ou escondido quando o usuário interagir.
               <br /><br />
               É uma solução nativa e acessível para exibir informações complementares.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<details>
+              <CodeBlock language="html" code={`<details>
   <summary>Ver mais</summary>
   <p>Este texto fica escondido até o usuário clicar no título.</p>
-</details>`}
-              </pre>
+</details>`} />
               Muito útil para FAQs, seções colapsáveis e descrições que não precisam estar visíveis o tempo todo.
             </p>
           ),
@@ -157,11 +140,9 @@ export const HTMLTagsPage = () => {
               <strong><code>&lt;em&gt;</code>:</strong> dá ênfase leve (semântico, geralmente em itálico).
               <br />
               <strong><code>&lt;mark&gt;</code>:</strong> destaca com fundo amarelo.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<p><strong>Importante:</strong> leia com atenção.</p>
+              <CodeBlock language="html" code={`<p><strong>Importante:</strong> leia com atenção.</p>
 <p><em>Esse detalhe pode passar despercebido.</em></p>
-<p>Palavras <mark>marcadas</mark> são úteis em revisões.</p>`}
-              </pre>
+<p>Palavras <mark>marcadas</mark> são úteis em revisões.</p>`} />
               Essas tags melhoram a comunicação, acessibilidade e a experiência geral de leitura.
             </p>
           ),
@@ -177,14 +158,12 @@ export const HTMLTagsPage = () => {
               <strong><code>&lt;div&gt;</code>:</strong> usada para agrupar blocos de conteúdo. É uma "caixa" genérica que pode conter outros elementos.
               <br />
               <strong><code>&lt;span&gt;</code>:</strong> usada para agrupar conteúdo em linha, como partes de texto.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-{`<div class="card">
+              <CodeBlock language="html" code={`<div class="card">
   <h2>Título</h2>
   <p>Conteúdo do card.</p>
 </div>
 
-<p>Você pode <span class="destaque">destacar</span> partes do texto.</p>`}
-              </pre>
+<p>Você pode <span class="destaque">destacar</span> partes do texto.</p>`} />
               Use essas tags quando não houver uma tag semântica apropriada, mas sempre que possível prefira tags que expressem o significado do conteúdo, como <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code> ou <code>&lt;section&gt;</code>.
             </p>
           ),

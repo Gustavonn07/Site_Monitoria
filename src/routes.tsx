@@ -32,6 +32,27 @@ import { FormsTextareaPage } from "./pages/MultimediaTextArea";
 import { FormsButtonsPage } from "./pages/MultimediaButtons";
 import { FormsValidationPage } from "./pages/MultimediaValidation";
 import { FormsSubmissionPage } from "./pages/MultimediaFormSubmission";
+import {
+  CSSIntroductionPage,
+  CSSColorsBordersPage,
+  CSSTextTablesPage,
+  CSSPositionPage,
+  CSSAlignPseudoPage,
+  CSSFlexboxPage,
+  MultimediaCanvas,
+  MultimediaAudioVideo,
+  MultimediaDOMIntroduction,
+  MultimediaDOMManipulation,
+  MultimediaEvents,
+  MultimediaModules,
+  MultimediaWebStorage,
+  ProgrammingArrays,
+  ProgrammingArrayMethods,
+  ProgrammingStrings,
+  ProgrammingOOPFundamentals,
+  ProgrammingOOPModeling,
+  ProgrammingOOPJavaScript,
+} from "./pages";
 
 
 const publicRoutes: RouteObject[] = [
@@ -162,6 +183,82 @@ const publicRoutes: RouteObject[] = [
       {
         path: "/programming/functions_recursion",
         element: <RecursiveFunctionsPage />
+      },
+      {
+        path: "/multimedia/css_introduction",
+        element: <CSSIntroductionPage />,
+      },
+      {
+        path: "/multimedia/css_colors_borders",
+        element: <CSSColorsBordersPage />,
+      },
+      {
+        path: "/multimedia/css_text_tables",
+        element: <CSSTextTablesPage />,
+      },
+      {
+        path: "/multimedia/css_position",
+        element: <CSSPositionPage />,
+      },
+      {
+        path: "/multimedia/css_align_pseudo",
+        element: <CSSAlignPseudoPage />,
+      },
+      {
+        path: "/multimedia/css_flexbox",
+        element: <CSSFlexboxPage />,
+      },
+      {
+        path: "/multimedia/canvas",
+        element: <MultimediaCanvas />,
+      },
+      {
+        path: "/multimedia/audio_video",
+        element: <MultimediaAudioVideo />,
+      },
+      {
+        path: "/multimedia/dom_introduction",
+        element: <MultimediaDOMIntroduction />,
+      },
+      {
+        path: "/multimedia/dom_manipulation",
+        element: <MultimediaDOMManipulation />,
+      },
+      {
+        path: "/multimedia/events",
+        element: <MultimediaEvents />,
+      },
+      {
+        path: "/multimedia/modules",
+        element: <MultimediaModules />,
+      },
+      {
+        path: "/multimedia/web_storage",
+        element: <MultimediaWebStorage />,
+      },
+      {
+        path: "/programming/arrays",
+        element: <ProgrammingArrays />,
+      },
+      {
+        path: "/programming/array_methods",
+        element: <ProgrammingArrayMethods />,
+      },
+      {
+        path: "/programming/strings",
+        element: <ProgrammingStrings />,
+      },
+      {
+        path: "/programming/oop_fundamentals",
+        element: <ProgrammingOOPFundamentals />,
+      },
+      {
+        path: "/programming/oop_modeling",
+        element: <ProgrammingOOPModeling />,
+      },
+      {
+        path: "/programming/oop_javascript",
+        element: <ProgrammingOOPJavaScript />,
       },
     ],
   },

@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const IntroductionP5js = () => {
   return (
@@ -42,9 +43,7 @@ export const IntroductionP5js = () => {
               </a>
               . Se quiser incluir em um projeto próprio, adicione o seguinte
               script no seu HTML:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>`}
-              </pre>
+              <CodeBlock language="javascript" code={`<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>`} />
             </p>
           ),
           sectionProps: {
@@ -84,16 +83,14 @@ export const IntroductionP5js = () => {
                 </li>
               </ul>
               Exemplo:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
                   createCanvas(400, 400);
                 }
 
                 function draw() {
                   background(220);
                   ellipse(200, 200, 50, 50);
-                }`}
-              </pre>
+                }`} />
             </p>
           ),
           sectionProps: {
@@ -119,11 +116,9 @@ export const IntroductionP5js = () => {
               </ul>
               Use <code>fill()</code> para cor interna e <code>stroke()</code>{" "}
               para borda. Exemplo:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`fill(255, 0, 0); // vermelho
+              <CodeBlock language="javascript" code={`fill(255, 0, 0); // vermelho
 stroke(0);        // borda preta
-rect(100, 100, 50, 50);`}
-              </pre>
+rect(100, 100, 50, 50);`} />
             </p>
           ),
           sectionProps: {
@@ -150,16 +145,14 @@ rect(100, 100, 50, 50);`}
                 </li>
               </ul>
               Exemplo:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function draw() {
+              <CodeBlock language="javascript" code={`function draw() {
   if (mouseIsPressed) {
     fill(0);
   } else {
     fill(255);
   }
   ellipse(mouseX, mouseY, 80, 80);
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: {

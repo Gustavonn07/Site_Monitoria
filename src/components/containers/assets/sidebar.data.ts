@@ -99,6 +99,83 @@ export const sidebar_data_multimedia: SidebarData = [
       },
     ],
   },
+  {
+    groupTitle: "CSS",
+    groupIcon: "simple-icons:css3",
+    group: [
+      {
+        title: "Introdução ao CSS",
+        icon: "mdi:language-css3",
+        link: "multimedia/css_introduction",
+      },
+      {
+        title: "Cores e Bordas",
+        icon: "mdi:palette-outline",
+        link: "multimedia/css_colors_borders",
+      },
+      {
+        title: "Texto e Tabelas",
+        icon: "mdi:format-text",
+        link: "multimedia/css_text_tables",
+      },
+      {
+        title: "Position",
+        icon: "mdi:axis-arrow",
+        link: "multimedia/css_position",
+      },
+      {
+        title: "Align e Pseudo-classes",
+        icon: "mdi:format-align-center",
+        link: "multimedia/css_align_pseudo",
+      },
+      {
+        title: "Flexbox",
+        icon: "mdi:view-column-outline",
+        link: "multimedia/css_flexbox",
+      },
+    ],
+  },
+  {
+    groupTitle: "Mídia, DOM e Interação",
+    groupIcon: "mdi:gesture-double-tap",
+    group: [
+      {
+        title: "Canvas",
+        icon: "mdi:draw-pen",
+        link: "multimedia/canvas",
+      },
+      {
+        title: "Áudio e Vídeo",
+        icon: "mdi:play-circle-outline",
+        link: "multimedia/audio_video",
+      },
+      {
+        title: "Introdução ao DOM",
+        icon: "mdi:file-tree-outline",
+        link: "multimedia/dom_introduction",
+      },
+      {
+        title: "Manipulando o DOM",
+        icon: "mdi:pencil-ruler",
+        link: "multimedia/dom_manipulation",
+      },
+      {
+        title: "Eventos",
+        icon: "mdi:cursor-default-click-outline",
+        link: "multimedia/events",
+      },
+      {
+        title: "Módulos",
+        icon: "mdi:puzzle-outline",
+        link: "multimedia/modules",
+      },
+      {
+        title: "Web Storage",
+        icon: "mdi:database-outline",
+        link: "multimedia/web_storage",
+      },
+    ],
+  },
 ];
 
 export const sidebar_data_programming: SidebarData = [
@@ -181,6 +258,48 @@ export const sidebar_data_programming: SidebarData = [
         title: "Funções Recursivas",
         icon: "mdi:sync",
         link: "/programming/functions_recursion",
+      },
+    ],
+  },
+  {
+    groupTitle: "Arrays e Strings",
+    groupIcon: "mdi:code-brackets",
+    group: [
+      {
+        title: "Arrays",
+        icon: "mdi:code-brackets",
+        link: "programming/arrays",
+      },
+      {
+        title: "Métodos e Desestruturação",
+        icon: "mdi:function-variant",
+        link: "programming/array_methods",
+      },
+      {
+        title: "Strings",
+        icon: "mdi:format-quote-close",
+        link: "programming/strings",
+      },
+    ],
+  },
+  {
+    groupTitle: "Programação Orientada a Objetos",
+    groupIcon: "mdi:shape-outline",
+    group: [
+      {
+        title: "Fundamentos de POO",
+        icon: "mdi:shape-outline",
+        link: "programming/oop_fundamentals",
+      },
+      {
+        title: "Modelagem de Problemas",
+        icon: "mdi:sitemap-outline",
+        link: "programming/oop_modeling",
+      },
+      {
+        title: "POO em JavaScript",
+        icon: "simple-icons:javascript",
+        link: "programming/oop_javascript",
       },
     ],
   },

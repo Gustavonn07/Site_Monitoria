@@ -1,4 +1,5 @@
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 import { PageItemsType } from "../../@types";
 
 export const HTMLLinksPage = () => {
@@ -20,13 +21,9 @@ export const HTMLLinksPage = () => {
               caminho interno.
               <br /><br />
               <strong>Exemplo de link externo:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="https://exemplo.com">Visitar exemplo.com</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="https://exemplo.com">Visitar exemplo.com</a>`} />
               <strong>Exemplo de link interno:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="/contato.html">Página de Contato</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="/contato.html">Página de Contato</a>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -40,9 +37,7 @@ export const HTMLLinksPage = () => {
               Usar <code>_blank</code> faz com que o link abra em uma nova aba ou janela.
               <br /><br />
               <strong>Exemplo:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="https://exemplo.com" target="_blank">Abrir em nova aba</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="https://exemplo.com" target="_blank">Abrir em nova aba</a>`} />
               Isso é útil quando você quer manter o usuário no seu site enquanto permite a
               navegação para outro.
             </p>
@@ -57,9 +52,7 @@ export const HTMLLinksPage = () => {
               Ao usar <code>target="_blank"</code>, o link será aberto em uma nova aba ou janela do navegador. Para evitar vulnerabilidades de segurança, é importante incluir <code>rel="noopener noreferrer"</code>.
               <br /><br />
               <strong>Exemplo seguro:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="https://siteexterno.com" target="_blank" rel="noopener noreferrer">Visitar</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="https://siteexterno.com" target="_blank" rel="noopener noreferrer">Visitar</a>`} />
               Sem esses atributos, a nova aba pode manipular a página original com JavaScript, o que é um risco de segurança.
             </p>
           ),
@@ -87,13 +80,11 @@ export const HTMLLinksPage = () => {
               utilizando âncoras com o atributo <code>id</code>.
               <br /><br />
               <strong>Exemplo:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="#contato">Ir para a seção de contato</a>
+              <CodeBlock language="html" code={`<a href="#contato">Ir para a seção de contato</a>
 
 ...
 
-<h2 id="contato">Contato</h2>`}
-              </pre>
+<h2 id="contato">Contato</h2>`} />
               Isso melhora a navegação, especialmente em páginas longas.
             </p>
           ),
@@ -109,13 +100,9 @@ export const HTMLLinksPage = () => {
               dispositivos compatíveis.
               <br /><br />
               <strong>Exemplo de e-mail:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="mailto:exemplo@site.com">Enviar e-mail</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="mailto:exemplo@site.com">Enviar e-mail</a>`} />
               <strong>Exemplo de telefone:</strong>
-              <pre className="bg-gray-100 p-2 rounded-md my-3 text-sm overflow-auto">
-{`<a href="tel:+5511999999999">Ligar</a>`}
-              </pre>
+              <CodeBlock language="html" code={`<a href="tel:+5511999999999">Ligar</a>`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },

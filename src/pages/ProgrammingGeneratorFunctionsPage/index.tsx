@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const GeneratorFunctionsPage = () => {
   return (
@@ -28,8 +29,7 @@ export const GeneratorFunctionsPage = () => {
           type: PageItemsType.SECTION,
           title: "Sintaxe básica",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function* contador() {
+            <CodeBlock language="javascript" code={`function* contador() {
   yield 1;
   yield 2;
   yield 3;
@@ -40,8 +40,7 @@ const gen = contador();
 console.log(gen.next()); // { value: 1, done: false }
 console.log(gen.next()); // { value: 2, done: false }
 console.log(gen.next()); // { value: 3, done: false }
-console.log(gen.next()); // { value: undefined, done: true }`}
-            </pre>
+console.log(gen.next()); // { value: undefined, done: true }`} />
           ),
         },
         {
@@ -58,8 +57,7 @@ console.log(gen.next()); // { value: undefined, done: true }`}
           type: PageItemsType.SECTION,
           title: "Exemplo prático com for...of",
           description: (
-            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-auto">
-{`function* sequencia(max) {
+            <CodeBlock language="javascript" code={`function* sequencia(max) {
   for (let i = 1; i <= max; i++) {
     yield i;
   }
@@ -68,8 +66,7 @@ console.log(gen.next()); // { value: undefined, done: true }`}
 for (const num of sequencia(5)) {
   console.log(num);
 }
-// Saída: 1 2 3 4 5`}
-            </pre>
+// Saída: 1 2 3 4 5`} />
           ),
           sectionProps: {
             hasSeparatorSection: true,

@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const ProgrammingInteractive = () => {
   return (
@@ -26,8 +27,7 @@ export const ProgrammingInteractive = () => {
                   também são suportadas.
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 200);
   background(220);
 }
@@ -39,8 +39,7 @@ function draw() {
 
 function mousePressed() {
   background(random(255)); // muda fundo ao clicar
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -53,16 +52,14 @@ function mousePressed() {
               <code>mouseX</code> e <code>mouseY</code> armazenam as posições
               atuais do cursor no canvas. Úteis para seguir o mouse ou medir
               distâncias.
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 150);
 }
 
 function draw() {
   background(255);
   ellipse(mouseX, mouseY, 40, 40);
-}`}
-              </pre>
+}`} />
               <p className="mt-2">
                 Outros valores úteis:
                 <ul className="list-disc list-inside mt-2">
@@ -92,8 +89,7 @@ function draw() {
                   pressionada.
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function setup() {
+              <CodeBlock language="javascript" code={`function setup() {
   createCanvas(300, 150);
 }
 
@@ -109,8 +105,7 @@ function draw() {
 
 function keyPressed() {
   console.log("Tecla pressionada:", key);
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: false },
@@ -121,8 +116,7 @@ function keyPressed() {
           description: (
             <p>
               Combine teclado e mouse para controle mais rico:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function draw() {
+              <CodeBlock language="javascript" code={`function draw() {
   if (mouseIsPressed && keyIsDown(32)) {
     // mouse + tecla espaço
     fill("purple");
@@ -130,8 +124,7 @@ function keyPressed() {
     fill("gray");
   }
   ellipse(mouseX, mouseY, 40, 40);
-}`}
-              </pre>
+}`} />
             </p>
           ),
         },
@@ -150,12 +143,10 @@ function keyPressed() {
                   de posição desde o último frame.
                 </li>
               </ul>
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function mouseWheel(event) {
+              <CodeBlock language="javascript" code={`function mouseWheel(event) {
   print(event.delta);
   return false;
-}`}
-              </pre>
+}`} />
             </p>
           ),
           sectionProps: { hasSeparatorSection: true },
@@ -167,14 +158,12 @@ function keyPressed() {
             <p>
               Use <code>mouseDragged()</code> para detectar movimento com botão
               pressionado:
-              <pre className="bg-gray-100 p-2 rounded-md my-5 text-sm overflow-auto">
-                {`function draw() {
+              <CodeBlock language="javascript" code={`function draw() {
   if (mouseIsPressed) {
     fill("blue");
     ellipse(mouseX, mouseY, 30, 30);
   }
-}`}
-              </pre>
+}`} />
               Também é possível trabalhar com arquivos usando{" "}
               <code>drop()</code>.
             </p>

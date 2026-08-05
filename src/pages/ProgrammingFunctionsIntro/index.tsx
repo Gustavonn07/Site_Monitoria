@@ -1,5 +1,6 @@
 import { PageItemsType } from "../../@types";
 import { PageBuilder } from "../../components/containers/PageBuilder";
+import { CodeBlock } from "../../components/common";
 
 export const FunctionsIntro = () => {
   return (
@@ -32,13 +33,11 @@ export const FunctionsIntro = () => {
             <p>
               A forma mais comum de criar funções é usando a palavra-chave{" "}
               <code>function</code>:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`function saudacao() {
+              <CodeBlock language="javascript" code={`function saudacao() {
   console.log("Olá, mundo!");
 }
 
-saudacao(); // saída: Olá, mundo!`}
-              </pre>
+saudacao(); // saída: Olá, mundo!`} />
               Neste exemplo, definimos uma função chamada{" "}
               <code>saudacao</code> que imprime uma mensagem no console.
             </p>
@@ -54,13 +53,11 @@ saudacao(); // saída: Olá, mundo!`}
             <p>
               Funções também podem ser atribuídas a variáveis. Isso é útil em
               programação funcional e callbacks:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`const soma = function (a, b) {
+              <CodeBlock language="javascript" code={`const soma = function (a, b) {
   return a + b;
 };
 
-console.log(soma(2, 3)); // saída: 5`}
-              </pre>
+console.log(soma(2, 3)); // saída: 5`} />
               Aqui criamos uma função anônima que soma dois números e a
               atribuimos à constante <code>soma</code>.
             </p>
@@ -76,11 +73,9 @@ console.log(soma(2, 3)); // saída: 5`}
             <p>
               O ES6 introduziu a sintaxe de <strong>arrow functions</strong>,
               mais curta e moderna:
-              <pre className="bg-gray-100 my-5 p-2 rounded-md text-sm overflow-auto">
-                {`const multiplicar = (x, y) => x * y;
+              <CodeBlock language="javascript" code={`const multiplicar = (x, y) => x * y;
 
-console.log(multiplicar(4, 5)); // saída: 20`}
-              </pre>
+console.log(multiplicar(4, 5)); // saída: 20`} />
               Essa sintaxe é muito usada em funções curtas e callbacks.
             </p>
           ),
@@ -115,7 +110,7 @@ console.log(multiplicar(4, 5)); // saída: 20`}
       ]}
       goBack={{
         text: "Voltar",
-        link: "",
+        link: "programming/challenges",
       }}
       goFoward={{
         text: "Próximo",
